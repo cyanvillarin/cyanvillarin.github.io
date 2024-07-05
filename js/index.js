@@ -4,28 +4,6 @@
 // cyanvillarin.github.io
 
 document.addEventListener("DOMContentLoaded", function() {
-    const carousels = [
-        {
-            id: 'carouselInner1',
-            images: [
-                "assets/other-apps/1-mercari/mercari-0.png",
-                "assets/other-apps/1-mercari/mercari-1.png",
-                "assets/other-apps/1-mercari/mercari-2.png"
-            ]
-        },
-        {
-            id: 'carouselInner2',
-            images: [
-                "assets/other-apps/2-rakuten-card/rakuten-0.png",
-                "assets/other-apps/2-rakuten-card/rakuten-1.png",
-                "assets/other-apps/2-rakuten-card/rakuten-2.png",
-                "assets/other-apps/2-rakuten-card/rakuten-3.png",
-                "assets/other-apps/2-rakuten-card/rakuten-4.png",
-                "assets/other-apps/2-rakuten-card/rakuten-5.png"
-            ]
-        }
-    ];
-
     const projects = [
         {
             id: 'project1',
@@ -40,6 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Dependency Injection",
                 "XCTests",
                 "Firebase SDK"
+            ],
+            carouselId: 'carouselInner1',
+            images: [
+                "assets/other-apps/1-mercari/mercari-0.png",
+                "assets/other-apps/1-mercari/mercari-1.png",
+                "assets/other-apps/1-mercari/mercari-2.png"
             ]
         },
         {
@@ -54,13 +38,51 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Swift Concurrency, Combine",
                 "XCTests",
                 "Firebase SDK"
+            ],
+            carouselId: 'carouselInner2',
+            images: [
+                "assets/other-apps/2-rakuten-card/rakuten-0.png",
+                "assets/other-apps/2-rakuten-card/rakuten-1.png",
+                "assets/other-apps/2-rakuten-card/rakuten-2.png",
+                "assets/other-apps/2-rakuten-card/rakuten-3.png",
+                "assets/other-apps/2-rakuten-card/rakuten-4.png",
+                "assets/other-apps/2-rakuten-card/rakuten-5.png"
+            ]
+        },
+        {
+            id: 'project3',
+            title: 'Bunpo iOS App',
+            link: 'https://apps.apple.com/us/app/bunpo-learn-japanese/id1279720052',
+            description: `An iOS app, with over 40 thousand monthly active users, that allows users to learn different languages like Japanese, Korean, and French. I was the one who implemented the Quiz Tracing feature of the app, where the user will be able to learn a character by tracing it.`,
+            technologies: [
+                "UIKit, SwiftUI",
+                "MVVM",
+                "Swift Concurrency",
+                "Dependency Injection",
+                "Firebase SDK"
+            ],
+            carouselId: 'carouselInner3',
+            images: [
+                "assets/other-apps/3-bunpo/bunpo-0.png",
+                "assets/other-apps/3-bunpo/bunpo-1.png",
+                "assets/other-apps/3-bunpo/bunpo-2.png",
+                "assets/other-apps/3-bunpo/bunpo-3.png",
+                "assets/other-apps/3-bunpo/bunpo-4.png",
+                "assets/other-apps/3-bunpo/bunpo-5.png",
+                "assets/other-apps/3-bunpo/bunpo-6.png",
+                "assets/other-apps/3-bunpo/bunpo-7.png",
+                "assets/other-apps/3-bunpo/bunpo-8.png"
             ]
         }
     ];
 
-    function createCarousel(carousel) {
-        const carouselInner = document.getElementById(carousel.id);
-        carousel.images.forEach((src, index) => {
+    function createProject(project) {
+        const projectContainer = document.getElementById(project.id);
+        const carouselInner = document.getElementById(project.carouselId);
+        const technologiesList = project.technologies.map(tech => `・${tech}<br>`).join('');
+
+        // Create carousel items
+        project.images.forEach((src, index) => {
             const itemDiv = document.createElement('div');
             itemDiv.className = `carousel-item ${index === 0 ? 'active' : ''}`;
 
@@ -75,13 +97,10 @@ document.addEventListener("DOMContentLoaded", function() {
             itemDiv.appendChild(imgContainer);
             carouselInner.appendChild(itemDiv);
         });
-    }
 
-    function createProject(project) {
-        const projectContainer = document.getElementById(project.id).querySelector('.featured-text');
-        const technologiesList = project.technologies.map(tech => `・${tech}<br>`).join('');
-
-        projectContainer.innerHTML = `
+        // Update project information
+        const projectText = projectContainer.querySelector('.featured-text');
+        projectText.innerHTML = `
             <h4><a href="${project.link}">${project.title}</a></h4>
             <p class="text-black-50 mb-0">
                 ${project.description}
@@ -93,6 +112,5 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
-    carousels.forEach(createCarousel);
     projects.forEach(createProject);
 });
