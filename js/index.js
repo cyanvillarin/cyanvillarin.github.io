@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project1',
             title: 'Mercari iOS App',
             link: 'https://apps.apple.com/jp/app/id667861049',
-            description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum.`,
+            description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum. Developed mainly on the つみたて auto-investment feature of the app.`,
             technologies: [
                 "SwiftUI",
                 "<a href='https://github.com/ra1028/swiftui-atom-properties'>Atoms</a>",
@@ -23,7 +23,16 @@ document.addEventListener("DOMContentLoaded", function() {
             images: [
                 "assets/other-apps/1-mercari/mercari-0.png",
                 "assets/other-apps/1-mercari/mercari-1.png",
-                "assets/other-apps/1-mercari/mercari-2.png"
+                "assets/other-apps/1-mercari/mercari-2.png",
+                "assets/other-apps/1-mercari/mercari-3.png",
+                "assets/other-apps/1-mercari/mercari-4.png",
+                "assets/other-apps/1-mercari/mercari-5.png",
+                "assets/other-apps/1-mercari/mercari-6.png",
+                "assets/other-apps/1-mercari/mercari-7.png",
+                "assets/other-apps/1-mercari/mercari-8.png",
+                "assets/other-apps/1-mercari/mercari-9.png",
+                "assets/other-apps/1-mercari/mercari-10.png",
+                "assets/other-apps/1-mercari/mercari-11.png"
             ]
         },
         {
