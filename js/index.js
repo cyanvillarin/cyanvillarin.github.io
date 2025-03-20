@@ -215,22 +215,30 @@ document.addEventListener("DOMContentLoaded", function() {
         const carouselInner = document.getElementById(project.carouselId);
         const technologiesList = project.technologies.map(tech => `・${tech}<br>`).join('');
 
-        // Create carousel items
-        project.images.forEach((src, index) => {
+        // Create carousel items (grouping 3 images per slide)
+        for (let i = 0; i < project.images.length; i += 3) {
             const itemDiv = document.createElement('div');
-            itemDiv.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+            itemDiv.className = `carousel-item ${i === 0 ? 'active' : ''}`;
 
-            const imgContainer = document.createElement('div');
-            imgContainer.className = 'd-flex justify-content-center align-items-center carousel-img-container';
+            const imgRow = document.createElement('div');
+            imgRow.className = 'd-flex justify-content-center';
 
-            const img = document.createElement('img');
-            img.className = 'img-fluid mb-3 mb-lg-0 carousel-img';
-            img.src = src;
+            // Add up to 3 images per carousel item
+            for (let j = i; j < i + 3 && j < project.images.length; j++) {
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'px-2'; // Small spacing between images
 
-            imgContainer.appendChild(img);
-            itemDiv.appendChild(imgContainer);
+                const img = document.createElement('img');
+                img.className = 'img-fluid carousel-img';
+                img.src = project.images[j];
+
+                imgContainer.appendChild(img);
+                imgRow.appendChild(imgContainer);
+            }
+
+            itemDiv.appendChild(imgRow);
             carouselInner.appendChild(itemDiv);
-        });
+        }
 
         // Update project information
         const projectText = projectContainer.querySelector('.featured-text');
