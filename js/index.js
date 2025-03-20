@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Swift Concurrency, Combine",
                 "GitHub CICD",
                 "Dependency Injection",
-                "XCTests",
-                "Firebase SDK"
+                "XCTest",
+                "XCUITest"
             ],
             carouselId: 'carouselInner1',
             images: [
@@ -37,6 +37,31 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
             id: 'project2',
+            title: 'Bunpo iOS App',
+            link: 'https://apps.apple.com/us/app/bunpo-learn-japanese/id1279720052',
+            description: `An iOS app, with over 40 thousand monthly active users, that allows users to learn different languages like Japanese, Korean, and French. I was the one who implemented the Quiz Tracing feature of the app, where the user will be able to learn a character by tracing it.`,
+            technologies: [
+                "SwiftUI",
+                "MVVM",
+                "Swift Concurrency",
+                "Dependency Injection",
+                "Firebase SDK"
+            ],
+            carouselId: 'carouselInner2',
+            images: [
+                "assets/other-apps/3-bunpo/bunpo-0.png",
+                "assets/other-apps/3-bunpo/bunpo-1.png",
+                "assets/other-apps/3-bunpo/bunpo-2.png",
+                "assets/other-apps/3-bunpo/bunpo-3.png",
+                "assets/other-apps/3-bunpo/bunpo-4.png",
+                "assets/other-apps/3-bunpo/bunpo-5.png",
+                "assets/other-apps/3-bunpo/bunpo-6.png",
+                "assets/other-apps/3-bunpo/bunpo-7.png",
+                "assets/other-apps/3-bunpo/bunpo-8.png"
+            ]
+        },
+        {
+            id: 'project3',
             title: 'RakutenCard iOS App',
             link: 'https://apps.apple.com/jp/app/id570105907',
             description: `An iOS app, with over <a href="https://rakuten.today/blog/q3-fy2023-results.html">40 million</a> monthly active users, that allows users to see credit statement bills, see campaigns, see Rakuten points, apply for revolving payment, and change their payment methods for the RakutenCard credit card.`,
@@ -48,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 "XCTests",
                 "Firebase SDK"
             ],
-            carouselId: 'carouselInner2',
+            carouselId: 'carouselInner3',
             images: [
                 "assets/other-apps/2-rakuten-card/rakuten-0.png",
                 "assets/other-apps/2-rakuten-card/rakuten-1.png",
@@ -56,31 +81,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 "assets/other-apps/2-rakuten-card/rakuten-3.png",
                 "assets/other-apps/2-rakuten-card/rakuten-4.png",
                 "assets/other-apps/2-rakuten-card/rakuten-5.png"
-            ]
-        },
-        {
-            id: 'project3',
-            title: 'Bunpo iOS App',
-            link: 'https://apps.apple.com/us/app/bunpo-learn-japanese/id1279720052',
-            description: `An iOS app, with over 40 thousand monthly active users, that allows users to learn different languages like Japanese, Korean, and French. I was the one who implemented the Quiz Tracing feature of the app, where the user will be able to learn a character by tracing it.`,
-            technologies: [
-                "UIKit, SwiftUI",
-                "MVVM",
-                "Swift Concurrency",
-                "Dependency Injection",
-                "Firebase SDK"
-            ],
-            carouselId: 'carouselInner3',
-            images: [
-                "assets/other-apps/3-bunpo/bunpo-0.png",
-                "assets/other-apps/3-bunpo/bunpo-1.png",
-                "assets/other-apps/3-bunpo/bunpo-2.png",
-                "assets/other-apps/3-bunpo/bunpo-3.png",
-                "assets/other-apps/3-bunpo/bunpo-4.png",
-                "assets/other-apps/3-bunpo/bunpo-5.png",
-                "assets/other-apps/3-bunpo/bunpo-6.png",
-                "assets/other-apps/3-bunpo/bunpo-7.png",
-                "assets/other-apps/3-bunpo/bunpo-8.png"
             ]
         },
         {
