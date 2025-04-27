@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project4',
             title: 'LookMe for Family iOS App',
             link: 'https://apps.apple.com/jp/app/id1576141035',
-            description: `An iOS app that allows parents of kindergarten/nursery students to see details from school. They can see details like the food their children ate, their kids’ body temperature, and other info. They can also see announcements from the school via the app.`,
+            description: `An iOS app that allows parents of kindergarten/nursery students to see details from school. They can see details like the food their children ate, their kids' body temperature, and other info. They can also see announcements from the school via the app.`,
             technologies: [
                 "UIKit",
                 "MVVM",
@@ -210,6 +210,91 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     ];
 
+    // My Apps data
+    const myApps = [
+        {
+            id: 'myApp1',
+            title: 'Chatzone iOS App',
+            link: 'https://apps.apple.com/us/app/chatzone-private-rooms/id1551793873',
+            description: `This app is a secured disappearing messages app. Use it to send sensitive information to other people without worrying about your messages being saved somewhere else.`,
+            technologies: [
+                "UIKit",
+                "MVVM",
+                "Xcode Cloud",
+                "Firebase SDK"
+            ],
+            carouselId: 'myAppsCarouselInner1',
+            images: [
+                "assets/own-apps/1-chatzone/chatzone-0.png",
+                "assets/own-apps/1-chatzone/chatzone-1.png",
+                "assets/own-apps/1-chatzone/chatzone-2.png",
+                "assets/own-apps/1-chatzone/chatzone-3.png",
+                "assets/own-apps/1-chatzone/chatzone-4.png",
+                "assets/own-apps/1-chatzone/chatzone-5.png",
+                "assets/own-apps/1-chatzone/chatzone-6.png",
+                "assets/own-apps/1-chatzone/chatzone-7.png",
+                "assets/own-apps/1-chatzone/chatzone-8.png"
+            ]
+        },
+        {
+            id: 'myApp2',
+            title: 'UAAP Sports iOS App',
+            link: 'https://apps.apple.com/us/app/uaap-sports/id1407677138',
+            description: `An iOS app that keeps you updated with the UAAP teams' current score standing and roster. Users are also able to view the information on each player, as well as view the most popular players. This is a personal project of mine, so I did the development for both the iOS client and the backend API.`,
+            technologies: [
+                "UIKit",
+                "Alamofire",
+                "RealmSwift",
+                "Firebase SDK"
+            ],
+            carouselId: 'myAppsCarouselInner2',
+            images: [
+                "assets/own-apps/2-uaap-sports/uaap-sports-0.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-1.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-2.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-3.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-4.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-5.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-6.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-7.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-8.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-9.png"
+            ]
+        },
+        {
+            id: 'myApp3',
+            title: 'Emotions iOS App',
+            link: 'https://apps.apple.com/us/app/emotions-quotes-and-stats/id1550042237',
+            description: `This app allows the user to see how other people are feeling. It also displays a quote that is relevant to the emotion that he/she has selected.`,
+            technologies: [
+                "UIKit",
+                "Firebase SDK"
+            ],
+            carouselId: 'myAppsCarouselInner3',
+            images: [
+                "assets/own-apps/3-emotions/emotions-1.png",
+                "assets/own-apps/3-emotions/emotions-2.png",
+                "assets/own-apps/3-emotions/emotions-3.png"
+            ]
+        },
+        {
+            id: 'myApp4',
+            title: 'Happisa iOS App',
+            link: 'https://apps.apple.com/bn/app/happisa-worlds-happiness/id1551291796',
+            description: `This app is just a simple app in which you can answer if you are happy or not. You also choose to input the reason as to why you chose that answer. Lastly, you will be able to see other people's reasons as to why they're happy or not.`,
+            technologies: [
+                "UIKit",
+                "Firebase SDK"
+            ],
+            carouselId: 'myAppsCarouselInner4',
+            images: [
+                "assets/own-apps/4-happisa/happisa-1.png",
+                "assets/own-apps/4-happisa/happisa-2.png",
+                "assets/own-apps/4-happisa/happisa-3.png"
+            ]
+        }
+    ];
+
     function createProject(project) {
         const projectContainer = document.getElementById(project.id);
         const carouselInner = document.getElementById(project.carouselId);
@@ -255,4 +340,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     projects.forEach(createProject);
+    myApps.forEach(createProject);
 });
