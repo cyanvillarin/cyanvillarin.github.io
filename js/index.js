@@ -9,13 +9,18 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project1',
             title: 'Mercari iOS App',
             link: 'https://apps.apple.com/jp/app/id667861049',
-            description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum. Developed mainly on the つみたて auto-investment feature of the app.`,
+            description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum. Key contributions include: refactored V1 TCA-like Architecture Pattern into V2 Atoms, developed new features for Account Opening with Coincheck, learned advanced git operations (rebase, amend, cherry-pick, squash, force-push), utilized Trunk-based development with small PRs (~200 lines to master) and RemoteConfigs to enable/disable features, and performed code reviews.`,
             technologies: [
                 "SwiftUI",
                 "<a href='https://github.com/ra1028/swiftui-atom-properties'>Atoms</a>",
+                "TCA-like Architecture Pattern",
                 "Swift Concurrency, Combine",
                 "GitHub CICD",
                 "Dependency Injection",
+                "Datadog",
+                "Playbook",
+                "Wireframe",
+                "AppIntents",
                 "XCTest",
                 "XCUITest"
             ],
@@ -64,14 +69,15 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project3',
             title: 'RakutenCard iOS App',
             link: 'https://apps.apple.com/jp/app/id570105907',
-            description: `An iOS app, with over <a href="https://rakuten.today/blog/q3-fy2023-results.html">40 million</a> monthly active users, that allows users to see credit statement bills, see campaigns, see Rakuten points, apply for revolving payment, and change their payment methods for the RakutenCard credit card.`,
+            description: `An iOS app, with over <a href="https://rakuten.today/blog/q3-fy2023-results.html">40 million</a> monthly active users, that allows users to see credit statement bills, see campaigns, see Rakuten points, apply for revolving payment, and change their payment methods for the RakutenCard credit card. Handled App Store release procedures and monitoring.`,
             technologies: [
                 "UIKit, SwiftUI",
                 "MVVM",
                 "Widgets",
                 "Swift Concurrency, Combine",
                 "XCTests",
-                "Firebase SDK"
+                "Firebase SDK",
+                "Kibana"
             ],
             carouselId: 'carouselInner3',
             images: [
@@ -298,24 +304,61 @@ document.addEventListener("DOMContentLoaded", function() {
     function createProject(project) {
         const projectContainer = document.getElementById(project.id);
         const carouselInner = document.getElementById(project.carouselId);
-        const technologiesList = project.technologies.map(tech => `・${tech}<br>`).join('');
+        const technologiesList = project.technologies.join(', ');
 
-        // Create carousel items (grouping 3 images per slide)
-        for (let i = 0; i < project.images.length; i += 3) {
+        // Separate videos and images
+        const videos = project.images.filter(src =>
+            src.endsWith('.mov') || src.endsWith('.mp4') || src.endsWith('.webm')
+        );
+        const images = project.images.filter(src =>
+            !src.endsWith('.mov') && !src.endsWith('.mp4') && !src.endsWith('.webm')
+        );
+
+        let isFirstSlide = true;
+
+        // Create carousel items for videos (1 video per slide)
+        videos.forEach(videoSrc => {
             const itemDiv = document.createElement('div');
-            itemDiv.className = `carousel-item ${i === 0 ? 'active' : ''}`;
+            itemDiv.className = `carousel-item ${isFirstSlide ? 'active' : ''}`;
+            isFirstSlide = false;
+
+            const videoRow = document.createElement('div');
+            videoRow.className = 'd-flex justify-content-center';
+
+            const videoContainer = document.createElement('div');
+            videoContainer.className = 'px-2';
+
+            const video = document.createElement('video');
+            video.className = 'img-fluid carousel-img';
+            video.src = videoSrc;
+            video.controls = true;
+            video.loop = true;
+            video.muted = true;
+            video.playsInline = true;
+
+            videoContainer.appendChild(video);
+            videoRow.appendChild(videoContainer);
+            itemDiv.appendChild(videoRow);
+            carouselInner.appendChild(itemDiv);
+        });
+
+        // Create carousel items for images (grouping 5 images per slide)
+        for (let i = 0; i < images.length; i += 5) {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = `carousel-item ${isFirstSlide ? 'active' : ''}`;
+            isFirstSlide = false;
 
             const imgRow = document.createElement('div');
             imgRow.className = 'd-flex justify-content-center';
 
-            // Add up to 3 images per carousel item
-            for (let j = i; j < i + 3 && j < project.images.length; j++) {
+            // Add up to 5 images per carousel item
+            for (let j = i; j < i + 5 && j < images.length; j++) {
                 const imgContainer = document.createElement('div');
-                imgContainer.className = 'px-2'; // Small spacing between images
+                imgContainer.className = 'px-2';
 
                 const img = document.createElement('img');
                 img.className = 'img-fluid carousel-img';
-                img.src = project.images[j];
+                img.src = images[j];
 
                 imgContainer.appendChild(img);
                 imgRow.appendChild(imgContainer);
@@ -325,16 +368,15 @@ document.addEventListener("DOMContentLoaded", function() {
             carouselInner.appendChild(itemDiv);
         }
 
-        // Update project information
-        const projectText = projectContainer.querySelector('.featured-text');
-        projectText.innerHTML = `
+        // Update project title, technologies, and description
+        const projectTitle = projectContainer.querySelector('.featured-text');
+        projectTitle.innerHTML = `
             <h4><a href="${project.link}">${project.title}</a></h4>
-            <p class="text-black-50 mb-0">
+            <p class="text-black-50 mb-0 mt-2">
+                Technologies used: ${technologiesList}
+            </p>
+            <p class="text-black-50 mb-0 mt-2">
                 ${project.description}
-                <br><br>
-                Technologies used:
-                <br>
-                ${technologiesList}
             </p>
         `;
     }

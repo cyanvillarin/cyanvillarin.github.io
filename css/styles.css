@@ -10264,13 +10264,11 @@ body {
   padding: 10rem 0;
 }
 .projects-section .featured-text {
-  padding: 2rem;
+  padding: 0;
 }
 @media (min-width: 992px) {
   .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
-    margin-left: 2rem;
+    padding: 0;
   }
 }
 .projects-section .project-text {
@@ -10286,6 +10284,61 @@ body {
     border-width: 0.25rem;
     width: 30%;
   }
+}
+
+/* Custom carousel controls positioning */
+.projects-section .carousel-control-prev {
+  left: -60px !important;
+}
+
+.projects-section .carousel-control-next {
+  right: -60px !important;
+}
+
+@media (max-width: 1200px) {
+  .projects-section .carousel-control-prev {
+    left: -40px !important;
+  }
+
+  .projects-section .carousel-control-next {
+    right: -40px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .projects-section .carousel-control-prev {
+    left: -20px !important;
+  }
+
+  .projects-section .carousel-control-next {
+    right: -20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section .carousel-control-prev {
+    left: 5px !important;
+  }
+
+  .projects-section .carousel-control-next {
+    right: 5px !important;
+  }
+}
+
+/* Add more spacing between project sections */
+.projects-section .row.no-gutters {
+  margin-bottom: 6rem !important;
+}
+
+/* Blogs section styling */
+.blogs-section {
+  padding: 10rem 0;
+  padding-bottom: 10rem;
+}
+
+/* Add more top padding to Contact section for better scrollspy detection */
+#contact {
+  padding-bottom: 80rem !important;
 }
 
 .signup-section {
