@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project1',
             title: 'Mercari iOS App',
             link: 'https://apps.apple.com/jp/app/id667861049',
-            description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum. Key contributions include: refactored V1 TCA-like Architecture Pattern into V2 Atoms, developed new features for Account Opening with Coincheck, learned advanced git operations (rebase, amend, cherry-pick, squash, force-push), utilized Trunk-based development with small PRs (~200 lines to master) and RemoteConfigs to enable/disable features, and performed code reviews.`,
+            description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum. Key contributions include: refactored V1 TCA-like Architecture Pattern into V2 <a href='https://github.com/ra1028/swiftui-atom-properties'>Atoms</a>, developed new features for Account Opening with Coincheck, learned advanced git operations (rebase, amend, cherry-pick, squash, force-push), utilized Trunk-based development with small PRs (~200 lines to master) and RemoteConfigs to enable/disable features, and performed code reviews.`,
             technologies: [
                 "SwiftUI",
-                "<a href='https://github.com/ra1028/swiftui-atom-properties'>Atoms</a>",
+                "Atoms",
                 "TCA-like Architecture Pattern",
                 "Swift Concurrency, Combine",
                 "GitHub CICD",
@@ -22,7 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Wireframe",
                 "AppIntents",
                 "XCTest",
-                "XCUITest"
+                "XCUITest",
+                "Bazel Build System",
+                "Charles",
+                "Claude Code",
+                "Cursor",
+                "Devin",
+                "JIRA"
             ],
             carouselId: 'carouselInner1',
             images: [
@@ -44,13 +50,17 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project2',
             title: 'Bunpo iOS App',
             link: 'https://apps.apple.com/us/app/bunpo-learn-japanese/id1279720052',
-            description: `An iOS app, with over 40 thousand monthly active users, that allows users to learn different languages like Japanese, Korean, and French. I was the one who implemented the Quiz Tracing feature of the app, where the user will be able to learn a character by tracing it.`,
+            description: `A language learning iOS app serving over 40,000 monthly active users across Japanese, Korean, and French language courses. Led the implementation of the Quiz Tracing feature, enabling interactive character learning through touch-based tracing mechanics.`,
             technologies: [
                 "SwiftUI",
                 "MVVM",
                 "Swift Concurrency",
                 "Dependency Injection",
-                "Firebase SDK"
+                "Firebase Analytics",
+                "Firebase Realtime Database",
+                "Firebase RemoteConfigs",
+                "Swift Package Manager",
+                "Xcode Build System"
             ],
             carouselId: 'carouselInner2',
             images: [
@@ -69,15 +79,19 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project3',
             title: 'RakutenCard iOS App',
             link: 'https://apps.apple.com/jp/app/id570105907',
-            description: `An iOS app, with over <a href="https://rakuten.today/blog/q3-fy2023-results.html">40 million</a> monthly active users, that allows users to see credit statement bills, see campaigns, see Rakuten points, apply for revolving payment, and change their payment methods for the RakutenCard credit card. Handled App Store release procedures and monitoring.`,
+            description: `A credit card management iOS app serving over <a href="https://rakuten.today/blog/q3-fy2023-results.html">40 million</a> monthly active users. Core features include credit statement viewing, campaign management, Rakuten points tracking, revolving payment applications, and payment method updates. Managed App Store release procedures and production monitoring.`,
             technologies: [
                 "UIKit, SwiftUI",
                 "MVVM",
                 "Widgets",
                 "Swift Concurrency, Combine",
                 "XCTests",
-                "Firebase SDK",
-                "Kibana"
+                "Firebase Analytics",
+                "Firebase Realtime Database",
+                "Firebase RemoteConfigs",
+                "Kibana",
+                "CocoaPods",
+                "Xcode Build System"
             ],
             carouselId: 'carouselInner3',
             images: [
@@ -93,13 +107,19 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project4',
             title: 'LookMe for Family iOS App',
             link: 'https://apps.apple.com/jp/app/id1576141035',
-            description: `An iOS app that allows parents of kindergarten/nursery students to see details from school. They can see details like the food their children ate, their kids' body temperature, and other info. They can also see announcements from the school via the app.`,
+            description: `A parent-facing iOS app for kindergarten and nursery school communication. Enables parents to access real-time information including meal records, body temperature logs, daily activities, and school announcements, facilitating seamless home-school connectivity.`,
             technologies: [
                 "UIKit",
                 "MVVM",
                 "RxSwift",
                 "XCTests",
-                "Firebase SDK"
+                "Firebase Analytics",
+                "Firebase Realtime Database",
+                "Firebase RemoteConfigs",
+                "Bitrise CICD",
+                "GitLab",
+                "CocoaPods",
+                "Xcode Build System"
             ],
             carouselId: 'carouselInner4',
             images: [
@@ -126,13 +146,19 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project5',
             title: 'LookMe Note iOS App',
             link: 'https://apps.apple.com/jp/app/id1576141035',
-            description: `An iOS app that allows kindergarten/nursery teachers to input data about students like what they ate, body temperature, and sleeping positions. It also allows the users to send announcements via the app.`,
+            description: `A teacher-facing iOS app for kindergarten and nursery school administration. Streamlines daily data entry including meal tracking, body temperature monitoring, and sleep position documentation. Features integrated announcement broadcasting capabilities for parent communication.`,
             technologies: [
                 "UIKit",
                 "MVVM",
                 "RxSwift",
                 "XCTests",
-                "Firebase SDK"
+                "Firebase Analytics",
+                "Firebase Realtime Database",
+                "Firebase RemoteConfigs",
+                "Bitrise CICD",
+                "GitLab",
+                "CocoaPods",
+                "Xcode Build System"
             ],
             carouselId: 'carouselInner5',
             images: [
@@ -150,13 +176,15 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project6',
             title: 'Globe At Home iOS App',
             link: 'https://itunes.apple.com/ph/app/globe-at-home/id1274352325?mt=8',
-            description: `An iOS app that allows users to track their data usage, view their bill, acquire volume boosts & add-ons, and redeem freebies on special events. This project involved 40 people (inclusive of developers, QAs, BAs, project managers) divided into 5 scrum teams. We used Agile as a Software Development Methodology.`,
+            description: `A telecommunications management iOS app enabling users to monitor data usage, view billing statements, purchase volume boosts and add-ons, and redeem promotional offers. Developed within a large-scale Agile environment comprising 40 team members across 5 Scrum teams, including developers, QA engineers, business analysts, and project managers.`,
             technologies: [
                 "UIKit",
                 "MVC",
                 "RealmSwift",
                 "Alamofire",
-                "SwiftyJSON"
+                "SwiftyJSON",
+                "CocoaPods",
+                "Xcode Build System"
             ],
             carouselId: 'carouselInner6',
             images: [
@@ -170,13 +198,15 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'project7',
             title: 'TennisTrainer iOS App',
-            description: `An iOS app that allows users to upload their tennis practice session recordings and view insights from professional tennis coaches. This project involved 8 people, and we used Agile as our Software Development Methodology.`,
+            description: `A sports training iOS app enabling users to upload tennis practice session recordings and receive professional coaching insights. Developed using Agile methodologies within an 8-person cross-functional team.`,
             technologies: [
                 "UIKit",
                 "MVC",
                 "RealmSwift",
                 "Alamofire",
-                "AWSS3"
+                "AWSS3",
+                "CocoaPods",
+                "Xcode Build System"
             ],
             carouselId: 'carouselInner7',
             images: [
@@ -196,11 +226,13 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'project8',
             title: 'Dailydronez iOS App',
-            description: `An iOS app for Dailydronez, a social platform for showcasing drone videos and photos. This project involved 6 people. We used Agile as our Software Development Methodology.`,
+            description: `A social media iOS app for the Dailydronez platform, specializing in drone photography and videography content sharing. Developed using Agile methodologies within a 6-person team.`,
             technologies: [
                 "Objective-C",
                 "MVC",
-                "SQLite"
+                "SQLite",
+                "CocoaPods",
+                "Xcode Build System"
             ],
             carouselId: 'carouselInner8',
             images: [
@@ -222,12 +254,16 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'myApp1',
             title: 'Chatzone iOS App',
             link: 'https://apps.apple.com/us/app/chatzone-private-rooms/id1551793873',
-            description: `This app is a secured disappearing messages app. Use it to send sensitive information to other people without worrying about your messages being saved somewhere else.`,
+            description: `A secure ephemeral messaging iOS app designed for privacy-focused communication. Features automatic message deletion to ensure sensitive information is not persistently stored, providing users with enhanced security for confidential exchanges.`,
             technologies: [
                 "UIKit",
                 "MVVM",
                 "Xcode Cloud",
-                "Firebase SDK"
+                "Firebase Analytics",
+                "Firebase Realtime Database",
+                "Firebase RemoteConfigs",
+                "Google AdMob",
+                "Xcode Build System"
             ],
             carouselId: 'myAppsCarouselInner1',
             images: [
@@ -246,12 +282,16 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'myApp2',
             title: 'UAAP Sports iOS App',
             link: 'https://apps.apple.com/us/app/uaap-sports/id1407677138',
-            description: `An iOS app that keeps you updated with the UAAP teams' current score standing and roster. Users are also able to view the information on each player, as well as view the most popular players. This is a personal project of mine, so I did the development for both the iOS client and the backend API.`,
+            description: `A sports information iOS app providing real-time UAAP team standings, roster information, and player statistics with popularity rankings. Full-stack personal project encompassing both iOS client development and backend API implementation.`,
             technologies: [
                 "UIKit",
                 "Alamofire",
                 "RealmSwift",
-                "Firebase SDK"
+                "Firebase Analytics",
+                "Firebase Realtime Database",
+                "Firebase RemoteConfigs",
+                "CocoaPods",
+                "Xcode Build System"
             ],
             carouselId: 'myAppsCarouselInner2',
             images: [
@@ -271,10 +311,13 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'myApp3',
             title: 'Emotions iOS App',
             link: 'https://apps.apple.com/us/app/emotions-quotes-and-stats/id1550042237',
-            description: `This app allows the user to see how other people are feeling. It also displays a quote that is relevant to the emotion that he/she has selected.`,
+            description: `A social sentiment iOS app enabling users to explore and share emotional states within a community. Features contextual quote delivery based on selected emotions, fostering emotional awareness and connection.`,
             technologies: [
                 "UIKit",
-                "Firebase SDK"
+                "Firebase Analytics",
+                "Firebase Realtime Database",
+                "Firebase RemoteConfigs",
+                "Xcode Build System"
             ],
             carouselId: 'myAppsCarouselInner3',
             images: [
@@ -287,10 +330,13 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'myApp4',
             title: 'Happisa iOS App',
             link: 'https://apps.apple.com/bn/app/happisa-worlds-happiness/id1551291796',
-            description: `This app is just a simple app in which you can answer if you are happy or not. You also choose to input the reason as to why you chose that answer. Lastly, you will be able to see other people's reasons as to why they're happy or not.`,
+            description: `A global happiness tracking iOS app facilitating emotional awareness and community connection. Users submit their happiness status with optional reasoning, enabling exploration of worldwide sentiment patterns and shared experiences.`,
             technologies: [
                 "UIKit",
-                "Firebase SDK"
+                "Firebase Analytics",
+                "Firebase Realtime Database",
+                "Firebase RemoteConfigs",
+                "Xcode Build System"
             ],
             carouselId: 'myAppsCarouselInner4',
             images: [
@@ -372,10 +418,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const projectTitle = projectContainer.querySelector('.featured-text');
         projectTitle.innerHTML = `
             <h4><a href="${project.link}">${project.title}</a></h4>
-            <p class="text-black-50 mb-0 mt-2">
-                Technologies used: ${technologiesList}
+            <p class="text-black-50 mb-0" style="margin-top: 0.625rem;">
+                <em>${technologiesList}</em>
             </p>
-            <p class="text-black-50 mb-0 mt-2">
+            <p class="text-black-50 mb-0" style="margin-top: 0.625rem;">
                 ${project.description}
             </p>
         `;

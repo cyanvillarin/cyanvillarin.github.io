@@ -10210,7 +10210,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%, #000000 100%), url("../assets/img/bg-space.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%, #000000 100%), url("../assets/img/new-zealand-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10227,13 +10227,23 @@ body {
           background-clip: text;
 }
 .masthead h2 {
-  max-width: 20rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 @media (min-width: 768px) {
   .masthead h1 {
     font-size: 4rem;
     line-height: 4rem;
+  }
+  .masthead h2 {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
   }
 }
 @media (min-width: 992px) {
@@ -10247,8 +10257,9 @@ body {
     letter-spacing: 0.8rem;
   }
   .masthead h2 {
-    max-width: 30rem;
-    font-size: 1.25rem;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.8rem;
   }
 }
 
@@ -10343,7 +10354,7 @@ body {
 
 .signup-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/bg-space.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/new-zealand-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10362,6 +10373,12 @@ body {
 
 .contact-section {
   padding-top: 5rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url("../assets/img/new-zealand-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
 }
 .contact-section .card {
   border: 0;
@@ -10413,7 +10430,7 @@ body {
 }
 
 .image-section {
-  height: 100px;
+  height: 250px;
   width: 100%; /* Extends the section horizontally */
   overflow: hidden; /* Ensures content doesn't overflow the section */
   display: flex;
