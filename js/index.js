@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project1',
             title: 'Mercari iOS App',
             link: 'https://apps.apple.com/jp/app/id667861049',
-            description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum. Key contributions include: refactored V1 TCA-like Architecture Pattern into V2 <a href='https://github.com/ra1028/swiftui-atom-properties'>Atoms</a>, developed new features for Account Opening with Coincheck, learned advanced git operations (rebase, amend, cherry-pick, squash, force-push), utilized Trunk-based development with small PRs (~200 lines to master) and RemoteConfigs to enable/disable features, and performed code reviews.`,
+            description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum. Key contributions include: refactored V1 TCA-like Architecture Pattern into V2 <a href='https://github.com/ra1028/swiftui-atom-properties'>Atoms</a>, migrated Design System from DS3 to DS4, migrated unit tests from XCTest to Swift Testing, developed new features for Account Opening with Coincheck, led the GetDx virtual team for developer experience improvements, served as member of the Laplace Log Schema team, learned advanced git operations (rebase, amend, cherry-pick, squash, force-push), utilized Trunk-based development with small PRs (~200 lines to master) and RemoteConfigs to enable/disable features, and performed code reviews.`,
             technologies: [
                 "SwiftUI",
                 "Atoms",
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Playbook",
                 "Wireframe",
                 "AppIntents",
-                "XCTest",
+                "Swift Testing",
                 "XCUITest",
                 "Bazel Build System",
                 "Charles",
@@ -327,6 +327,136 @@ document.addEventListener("DOMContentLoaded", function() {
             ]
         },
         {
+            id: 'myApp5',
+            title: 'Savings - Track Your Money',
+            link: '#',
+            description: `A personal asset tracking iOS app for recording snapshots of total assets over time and visualizing financial progress. Features interactive charts across multiple time periods (1W, 1M, 3M, 6M, 1Y, All), home screen widgets showing latest balance and savings chart, support for 16 currencies, and privacy-first design with all data stored on-device via SwiftData. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
+            technologies: [
+                "SwiftUI",
+                "SwiftData",
+                "Swift Charts",
+                "WidgetKit",
+                "Xcode Cloud",
+                "Google AdMob",
+                "Xcode Build System"
+            ],
+            carouselId: 'myAppsCarouselInner5',
+            images: [],
+            placeholderCount: 5
+        },
+        {
+            id: 'myApp6',
+            title: 'Earnings – Track Your Pay',
+            link: '#',
+            description: `A real-time earnings tracker iOS app that shows exactly how much money users have earned since starting their job, updating live to the second. Set income, working days, and hours once, and the app calculates precise workday-based earnings. Features home screen widgets, a live per-second rate animation, and progress views for the current hour, day, week, month, or year. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
+            technologies: [
+                "SwiftUI",
+                "SwiftData",
+                "WidgetKit",
+                "Xcode Cloud",
+                "Google AdMob",
+                "Xcode Build System"
+            ],
+            carouselId: 'myAppsCarouselInner6',
+            images: [],
+            placeholderCount: 5
+        },
+        {
+            id: 'myApp7',
+            title: 'Mazda Phone Wallpapers',
+            link: 'https://mazdaphonewallpapers.web.app',
+            description: `A curated gallery website offering free high-resolution Mazda phone wallpapers. Each wallpaper is crafted at full 1320×2868px resolution to fit modern iPhone screens perfectly. Built as a clean, browseable gallery with individual wallpaper pages.`,
+            technologies: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Firebase Hosting"
+            ],
+            carouselId: 'myAppsCarouselInner7',
+            images: [],
+            placeholderCount: 2
+        },
+        {
+            id: 'myApp8',
+            title: 'Mazda Universe Blog',
+            link: 'https://mazdauniverse.web.app',
+            description: `A blog website dedicated to Mazda cars, featuring articles on ownership tips, accessories, and driving experiences. Each article has its own page with cover image, table of contents, and related links. Built with plain HTML and CSS for fast, lightweight delivery.`,
+            technologies: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Firebase Hosting"
+            ],
+            carouselId: 'myAppsCarouselInner8',
+            images: [],
+            placeholderCount: 2
+        },
+        {
+            id: 'myApp9',
+            title: 'Eyes of the Gods',
+            link: 'https://eyesofthegods.web.app',
+            description: `A theatrical web app styled as a global surveillance dashboard. Features a 3D interactive globe powered by Three.js and globe.gl, with clickable location nodes that open live YouTube video feeds styled as spy-cam surveillance streams.`,
+            technologies: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Three.js",
+                "globe.gl",
+                "Firebase Hosting"
+            ],
+            carouselId: 'myAppsCarouselInner9',
+            images: [],
+            placeholderCount: 2
+        },
+        {
+            id: 'myApp2',
+            title: 'UAAP Sports iOS App',
+            link: 'https://apps.apple.com/us/app/uaap-sports/id1407677138',
+            description: `A sports information iOS app providing real-time UAAP team standings, roster information, and player statistics with popularity rankings. Full-stack personal project encompassing both iOS client development and backend API implementation.`,
+            technologies: [
+                "UIKit",
+                "Alamofire",
+                "RealmSwift",
+                "Firebase Analytics",
+                "Firebase Realtime Database",
+                "Firebase RemoteConfigs",
+                "CocoaPods",
+                "Xcode Build System"
+            ],
+            carouselId: 'myAppsCarouselInner2',
+            images: [
+                "assets/own-apps/2-uaap-sports/uaap-sports-0.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-1.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-2.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-3.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-4.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-5.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-6.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-7.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-8.png",
+                "assets/own-apps/2-uaap-sports/uaap-sports-9.png"
+            ]
+        },
+        {
+            id: 'myApp3',
+            title: 'Emotions iOS App',
+            link: 'https://apps.apple.com/us/app/emotions-quotes-and-stats/id1550042237',
+            description: `A social sentiment iOS app enabling users to explore and share emotional states within a community. Features contextual quote delivery based on selected emotions, fostering emotional awareness and connection.`,
+            technologies: [
+                "UIKit",
+                "Firebase Analytics",
+                "Firebase Realtime Database",
+                "Firebase RemoteConfigs",
+                "Xcode Build System"
+            ],
+            carouselId: 'myAppsCarouselInner3',
+            images: [
+                "assets/own-apps/3-emotions/emotions-1.png",
+                "assets/own-apps/3-emotions/emotions-2.png",
+                "assets/own-apps/3-emotions/emotions-3.png"
+            ]
+        },
+        {
             id: 'myApp4',
             title: 'Happisa iOS App',
             link: 'https://apps.apple.com/bn/app/happisa-worlds-happiness/id1551291796',
@@ -387,6 +517,37 @@ document.addEventListener("DOMContentLoaded", function() {
             itemDiv.appendChild(videoRow);
             carouselInner.appendChild(itemDiv);
         });
+
+        // Show placeholder if no media at all
+        if (videos.length === 0 && images.length === 0) {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'carousel-item active';
+
+            const row = document.createElement('div');
+            row.className = 'd-flex justify-content-center';
+
+            const count = project.placeholderCount || 1;
+            const isWeb = count === 2;
+
+            for (let i = 0; i < count; i++) {
+                const col = document.createElement('div');
+                col.className = 'px-2';
+
+                const placeholder = document.createElement('div');
+                if (isWeb) {
+                    placeholder.style.cssText = 'display:flex;align-items:center;justify-content:center;width:calc(50vw - 4rem);max-width:480px;height:280px;background:#f0f0f0;border-radius:8px;color:#999;font-size:0.9rem;letter-spacing:0.05em;';
+                } else {
+                    placeholder.style.cssText = 'display:flex;align-items:center;justify-content:center;width:200px;height:430px;background:#f0f0f0;border-radius:8px;color:#999;font-size:0.9rem;letter-spacing:0.05em;';
+                }
+                placeholder.textContent = 'Coming soon';
+
+                col.appendChild(placeholder);
+                row.appendChild(col);
+            }
+
+            itemDiv.appendChild(row);
+            carouselInner.appendChild(itemDiv);
+        }
 
         // Create carousel items for images (grouping 5 images per slide)
         for (let i = 0; i < images.length; i += 5) {

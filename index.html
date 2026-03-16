@@ -34,6 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#my-workflow">My Workflow</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#apps-ive-worked-on">Company Apps</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#own-apps">My Apps</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#my-blogs">My Tech Blogs</a></li>
@@ -77,6 +78,66 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- My Workflow -->
+        <section class="blogs-section bg-light" id="my-workflow">
+            <div class="container">
+                <h1>My Workflow</h1>
+                <br>
+
+                <p class="text-black-50">
+                    Over the past year, AI has become a core part of how I work. Rather than treating it as a novelty, I've spent time learning to use it efficiently — studying different prompting techniques, discovering what kinds of tasks AI handles well versus poorly, and building structured workflows around its strengths. The result is that I get significantly more done per day, with AI handling the repetitive and mechanical parts of development so I can stay focused on architecture, product decisions, and code quality. The rest of this section describes the specific tools and systems I've built around that philosophy.
+                </p>
+
+                <h4>Obsidian as a Second Brain</h4>
+                <p class="text-black-50">
+                    My entire knowledge base lives in an <a href="https://obsidian.md" target="_blank">Obsidian</a> vault — SwiftUI patterns, Japanese study notes, car records, project todos, engineering references, and curated shortcut sheets for Xcode, macOS, shell, and Chrome, all in one place. Keeping shortcuts written down and readily accessible means less time spent remembering key bindings and more time in flow. The vault is stored in <strong>iCloud Drive</strong> for seamless sync across all my devices, and also pushed to <strong>GitHub</strong> as a version-controlled backup. A root-level <code>index.md</code> lists every note with a one-line summary, making lookup fast without scanning the entire vault. Since everything is stored as plain Markdown files on disk, the vault works fully offline — I can browse and read my notes anytime without an internet connection, and Claude Code can read directly from it the same way, treating it as a local knowledge base that's always available regardless of connectivity.
+                </p>
+
+                <br>
+                <h4>Vault-Powered Claude Code</h4>
+                <p class="text-black-50">
+                    My global AI configuration is managed entirely from within the vault. <code>~/.claude/CLAUDE.md</code> (which tells Claude Code how to behave across all projects) is a symlink pointing to <code>Setup/CLAUDE.md</code> inside the vault. Likewise, <code>~/.claude/commands/</code> is symlinked to the vault's <code>Claude Code Commands/</code> folder — so every custom slash command is just a Markdown file in Obsidian. Editing a command in the vault makes it instantly available in Claude Code with no restarts or manual syncing needed.
+                </p>
+
+                <br>
+                <h4>Custom Slash Commands</h4>
+                <p class="text-black-50">A library of custom slash commands drives the full development lifecycle:</p>
+                <ul class="text-black-50">
+                    <li><strong>/start-claude</strong> — loads project context, reads the relevant CLAUDE.md files, and explores the codebase before any session begins</li>
+                    <li><strong>/work-on-todos</strong> — reads all vault todo lists across every project, spawns up to 3 parallel <a href="https://ghostty.org" target="_blank">Ghostty</a> terminal sessions (one per repo), implements features autonomously using Claude Code, commits each change, and creates a pull request per task — all without switching windows manually</li>
+                    <li><strong>/commit</strong> — stages changes and creates a commit following project-specific conventions</li>
+                    <li><strong>/create-pr</strong> — pushes the branch and opens a pull request with a structured description</li>
+                    <li><strong>/commit-then-deploy</strong> — commits all changes and deploys to Firebase Hosting in a single command</li>
+                    <li><strong>/whats-our-todos</strong> — surfaces all pending tasks across every project's todo file in the vault</li>
+                    <li><strong>/add-knowledge</strong> — saves a new learning or pattern directly into the vault so it's available in future sessions</li>
+                </ul>
+
+                <br>
+                <h4>Git Worktrees for Parallel Ticket Work</h4>
+                <p class="text-black-50">
+                    At work, I maintain up to <strong>10 active git worktrees</strong> simultaneously, each on its own branch and ticket. This lets me switch context instantly — no stashing, no waiting for builds to settle — while AI agents work independently in each worktree. Two custom commands keep this manageable:
+                </p>
+                <ul class="text-black-50">
+                    <li><strong>/show-worktrees</strong> — lists all active worktrees with their branch, status, and associated ticket at a glance</li>
+                    <li><strong>/cleanup-worktrees</strong> — resets a finished worktree by detaching its HEAD, freeing the branch name so a fresh branch can be checked out there for the next ticket without deleting and recreating the worktree</li>
+                </ul>
+                <p class="text-black-50">
+                    Since the project uses <strong>Bazel</strong> as its build system, all worktrees are configured to share the Bazel cache of the main repository. This means 10 worktrees do not mean 10× the storage — incremental build artifacts are reused across all of them, keeping disk usage lean while still getting full parallel builds.
+                </p>
+
+                <br>
+                <h4>Everything Connected</h4>
+                <p class="text-black-50">
+                    The vault is the single source of truth for both human knowledge and AI behavior. When Claude Code needs context — architecture patterns, project conventions, or past decisions — it reads the vault first. New learnings flow back into the vault so they're available in every future session. This creates a feedback loop where the AI gets more effective over time, grounded in real project history rather than starting fresh each conversation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Separator Section -->
+        <section class="image-section">
+            <img src="assets/img/new-zealand-1.jpg">
         </section>
 
         <!-- Company Apps -->
@@ -317,6 +378,126 @@
                     </div>
                 </div>
 
+                <!-- My App 5 -->
+                <div class="row no-gutters mb-5">
+                    <div class="col-12" id="myApp5">
+                        <div class="featured-text text-left">
+                            <!-- My App 5 name will be updated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div id="myAppsCarousel5" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner" id="myAppsCarouselInner5">
+                                <!-- Carousel items for My App 5 will be injected here by JavaScript -->
+                            </div>
+                            <a class="carousel-control-prev" href="#myAppsCarousel5" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myAppsCarousel5" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My App 6 -->
+                <div class="row no-gutters mb-5">
+                    <div class="col-12" id="myApp6">
+                        <div class="featured-text text-left">
+                            <!-- My App 6 name will be updated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div id="myAppsCarousel6" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner" id="myAppsCarouselInner6">
+                                <!-- Carousel items for My App 6 will be injected here by JavaScript -->
+                            </div>
+                            <a class="carousel-control-prev" href="#myAppsCarousel6" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myAppsCarousel6" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My App 7 -->
+                <div class="row no-gutters mb-5">
+                    <div class="col-12" id="myApp7">
+                        <div class="featured-text text-left">
+                            <!-- My App 7 name will be updated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div id="myAppsCarousel7" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner" id="myAppsCarouselInner7">
+                                <!-- Carousel items for My App 7 will be injected here by JavaScript -->
+                            </div>
+                            <a class="carousel-control-prev" href="#myAppsCarousel7" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myAppsCarousel7" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My App 8 -->
+                <div class="row no-gutters mb-5">
+                    <div class="col-12" id="myApp8">
+                        <div class="featured-text text-left">
+                            <!-- My App 8 name will be updated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div id="myAppsCarousel8" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner" id="myAppsCarouselInner8">
+                                <!-- Carousel items for My App 8 will be injected here by JavaScript -->
+                            </div>
+                            <a class="carousel-control-prev" href="#myAppsCarousel8" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myAppsCarousel8" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My App 9 -->
+                <div class="row no-gutters mb-5">
+                    <div class="col-12" id="myApp9">
+                        <div class="featured-text text-left">
+                            <!-- My App 9 name will be updated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div id="myAppsCarousel9" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner" id="myAppsCarouselInner9">
+                                <!-- Carousel items for My App 9 will be injected here by JavaScript -->
+                            </div>
+                            <a class="carousel-control-prev" href="#myAppsCarousel9" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myAppsCarousel9" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- My App 2 -->
                 <div class="row no-gutters mb-5">
                     <div class="col-12" id="myApp2">
@@ -395,7 +576,7 @@
         <section class="image-section">
             <img src="assets/img/new-zealand-1.jpg">
         </section>
-        
+
         <!-- My Blogs -->
         <section class="blogs-section bg-light" id="my-blogs">
             <div class="container">
