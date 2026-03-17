@@ -341,8 +341,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Xcode Build System"
             ],
             carouselId: 'myAppsCarouselInner5',
-            images: [],
-            placeholderCount: 5
+            images: [
+                "assets/own-apps/5-savings/savings-0.png",
+                "assets/own-apps/5-savings/savings-1.png",
+                "assets/own-apps/5-savings/savings-2.png",
+                "assets/own-apps/5-savings/savings-3.png",
+                "assets/own-apps/5-savings/savings-4.png",
+                "assets/own-apps/5-savings/savings-5.png"
+            ]
         },
         {
             id: 'myApp6',
@@ -358,8 +364,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Xcode Build System"
             ],
             carouselId: 'myAppsCarouselInner6',
-            images: [],
-            placeholderCount: 5
+            images: [
+                "assets/own-apps/6-earnings/earnings-0.png",
+                "assets/own-apps/6-earnings/earnings-1.png",
+                "assets/own-apps/6-earnings/earnings-2.png",
+                "assets/own-apps/6-earnings/earnings-3.png",
+                "assets/own-apps/6-earnings/earnings-4.png",
+                "assets/own-apps/6-earnings/earnings-5.png",
+                "assets/own-apps/6-earnings/earnings-6.png"
+            ]
         },
         {
             id: 'myApp7',
