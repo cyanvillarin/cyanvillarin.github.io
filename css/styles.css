@@ -10420,9 +10420,16 @@ body {
 
 .carousel-img {
   width: 200px;
-  height: auto;
+  height: 430px;
   object-fit: contain;
-  border-radius: 8px; /* Optional: Slightly rounded images */
+  border-radius: 8px;
+}
+
+.carousel-img-web {
+  width: auto;
+  height: 860px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .carousel-img-container {

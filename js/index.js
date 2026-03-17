@@ -386,8 +386,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Firebase Hosting"
             ],
             carouselId: 'myAppsCarouselInner7',
-            images: [],
-            placeholderCount: 2
+            imagesPerSlide: 1,
+            images: [
+                "assets/own-apps/7-mazda-wallpapers/mazda-wallpapers-0.png",
+                "assets/own-apps/7-mazda-wallpapers/mazda-wallpapers-1.png",
+                "assets/own-apps/7-mazda-wallpapers/mazda-wallpapers-2.png",
+                "assets/own-apps/7-mazda-wallpapers/mazda-wallpapers-3.png"
+            ]
         },
         {
             id: 'myApp8',
@@ -401,8 +406,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Firebase Hosting"
             ],
             carouselId: 'myAppsCarouselInner8',
-            images: [],
-            placeholderCount: 2
+            imagesPerSlide: 1,
+            images: [
+                "assets/own-apps/8-mazda-blog/mazda-blog-0.png",
+                "assets/own-apps/8-mazda-blog/mazda-blog-1.png",
+                "assets/own-apps/8-mazda-blog/mazda-blog-2.png",
+                "assets/own-apps/8-mazda-blog/mazda-blog-3.png",
+                "assets/own-apps/8-mazda-blog/mazda-blog-4.png",
+                "assets/own-apps/8-mazda-blog/mazda-blog-5.png"
+            ]
         },
         {
             id: 'myApp9',
@@ -418,8 +430,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Firebase Hosting"
             ],
             carouselId: 'myAppsCarouselInner9',
-            images: [],
-            placeholderCount: 2
+            imagesPerSlide: 1,
+            images: [
+                "assets/own-apps/9-eyes-of-gods/eyes-0.png",
+                "assets/own-apps/9-eyes-of-gods/eyes-1.png",
+                "assets/own-apps/9-eyes-of-gods/eyes-2.png"
+            ]
         },
         {
             id: 'myApp2',
@@ -562,8 +578,9 @@ document.addEventListener("DOMContentLoaded", function() {
             carouselInner.appendChild(itemDiv);
         }
 
-        // Create carousel items for images (grouping 5 images per slide)
-        for (let i = 0; i < images.length; i += 5) {
+        // Create carousel items for images
+        const perSlide = project.imagesPerSlide || 5;
+        for (let i = 0; i < images.length; i += perSlide) {
             const itemDiv = document.createElement('div');
             itemDiv.className = `carousel-item ${isFirstSlide ? 'active' : ''}`;
             isFirstSlide = false;
@@ -571,13 +588,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const imgRow = document.createElement('div');
             imgRow.className = 'd-flex justify-content-center';
 
-            // Add up to 5 images per carousel item
-            for (let j = i; j < i + 5 && j < images.length; j++) {
+            for (let j = i; j < i + perSlide && j < images.length; j++) {
                 const imgContainer = document.createElement('div');
                 imgContainer.className = 'px-2';
 
                 const img = document.createElement('img');
-                img.className = 'img-fluid carousel-img';
+                img.className = project.imagesPerSlide ? 'img-fluid carousel-img-web' : 'img-fluid carousel-img';
                 img.src = images[j];
 
                 imgContainer.appendChild(img);
