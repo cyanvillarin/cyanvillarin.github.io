@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp5',
             title: 'Savings - Track Your Money',
-            link: '#',
+            link: 'https://apps.apple.com/us/app/savings-track-your-money/id6760301607',
             description: `A personal asset tracking iOS app for recording snapshots of total assets over time and visualizing financial progress. Features interactive charts across multiple time periods (1W, 1M, 3M, 6M, 1Y, All), home screen widgets showing latest balance and savings chart, support for 16 currencies, and privacy-first design with all data stored on-device via SwiftData. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
             technologies: [
                 "SwiftUI",
@@ -353,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp6',
             title: 'Earnings – Track Your Pay',
-            link: '#',
+            link: 'https://apps.apple.com/us/app/earnings-realtime-tracking/id6760335853',
             description: `A real-time earnings tracker iOS app that shows exactly how much money users have earned since starting their job, updating live to the second. Set income, working days, and hours once, and the app calculates precise workday-based earnings. Features home screen widgets, a live per-second rate animation, and progress views for the current hour, day, week, month, or year. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
             technologies: [
                 "SwiftUI",
