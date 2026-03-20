@@ -19,6 +19,8 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.b∂ootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- i18n -->
+        <script src="js/i18n.js"></script>
         <!-- The script for this HTML -->
         <script src="js/index.js"></script>
     </head>
@@ -33,12 +35,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About Me</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#my-workflow">My Workflow</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#apps-ive-worked-on">Company Apps</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#own-apps">My Apps</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#my-blogs">My Tech Blogs</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact Me</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" data-i18n="nav.about">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#my-workflow" data-i18n="nav.workflow">My Workflow</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#apps-ive-worked-on" data-i18n="nav.company-apps">Company Apps</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#own-apps" data-i18n="nav.my-apps">My Apps</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#my-blogs" data-i18n="nav.blogs">My Tech Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact" data-i18n="nav.contact">Contact Me</a></li>
+                        <li class="nav-item"><a class="nav-link" id="langToggle" href="?lang=ja" style="font-weight: 700; white-space: nowrap;">日本語</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,8 +51,8 @@
             <div class="container d-flex h-100 align-items-center">
                 <div class="mx-auto text-center">
                     <h1 class="mx-auto my-0 text-uppercase">Cyan Villarin</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5">SENIOR IOS ENGINEER</h2>
-                    <a class="btn btn-primary js-scroll-trigger" href="#about">Learn more</a>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5" data-i18n="masthead.subtitle">SENIOR IOS ENGINEER</h2>
+                    <a class="btn btn-primary js-scroll-trigger" href="#about" data-i18n="masthead.cta">Learn more</a>
                 </div>
             </div>
         </header>
@@ -58,8 +61,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h2 class="text-white mb-4">Greetings!</h2>
-                        <p class="text-white-50" style="margin-bottom: 0.5rem;">
+                        <h2 class="text-white mb-4" data-i18n="about.greeting">Greetings!</h2>
+                        <p class="text-white-50" style="margin-bottom: 0.5rem;" data-i18n="about.bio">
                             I am a Senior iOS Developer, based in Japan, with over 7 years of professional experience building customer-facing iOS apps using Swift. I specialize in creating apps that deliver meaningful impact to users' lives, particularly for large-scale user bases where attention to detail and reliability are critical. As a strong advocate of Agile Scrum methodologies, I believe in iterative development and continuous improvement. Beyond iOS development, I maintain a keen curiosity for UI/UX design principles, database architecture, and backend development, actively learning how these systems work to facilitate smooth project execution.
                         </p>
                         <!-- GitHub Activity Section -->
@@ -69,10 +72,10 @@
                         <div class="mb-4">
                             <img class="img-fluid" src="assets/img/github-2025.png" alt="GitHub Activity 2025" style="width: 99%;"/>
                         </div>
-                        <p class="text-white-50" style="margin-bottom: 1.8rem;">
+                        <p class="text-white-50" style="margin-bottom: 1.8rem;" data-i18n="about.github">
                             At work, we leverage GitHub for version control and collaborative development. The above snapshots of my GitHub contributions reflect consistent engagement with code review, feature development, and collaborative engineering practices.
                         </p>
-                        <p class="text-white-50" style="margin-bottom: 14rem;">
+                        <p class="text-white-50" style="margin-bottom: 14rem;" data-i18n="about.interests">
                             I maintain a keen interest in health and fitness, recognizing that personal well-being is fundamental to both personal and professional excellence. Beyond technology, I cultivate curiosity in diverse fields including astronomy and marine biology. I have several iOS apps available on the <a href="https://apps.apple.com/us/developer/cyan-villarin/id1407677137">App Store</a>, all optimized for both iPhone and iPad platforms.
                         </p>
                     </div>
@@ -83,28 +86,28 @@
         <!-- My Workflow -->
         <section class="blogs-section bg-light" id="my-workflow">
             <div class="container">
-                <h1>My Workflow</h1>
+                <h1 data-i18n="workflow.title">My Workflow</h1>
                 <br>
 
-                <p class="text-black-50">
+                <p class="text-black-50" data-i18n="workflow.intro">
                     Over the past year, AI has become a core part of how I work. Rather than treating it as a novelty, I've spent time learning to use it efficiently — studying different prompting techniques, discovering what kinds of tasks AI handles well versus poorly, and building structured workflows around its strengths. The result is that I get significantly more done per day, with AI handling the repetitive and mechanical parts of development so I can stay focused on architecture, product decisions, and code quality. The rest of this section describes the specific tools and systems I've built around that philosophy.
                 </p>
 
-                <h4>Obsidian as a Second Brain</h4>
-                <p class="text-black-50">
+                <h4 data-i18n="workflow.obsidian.title">Obsidian as a Second Brain</h4>
+                <p class="text-black-50" data-i18n="workflow.obsidian.body">
                     My entire knowledge base lives in an <a href="https://obsidian.md" target="_blank">Obsidian</a> vault — SwiftUI patterns, Japanese study notes, car records, project todos, engineering references, and curated shortcut sheets for Xcode, macOS, shell, and Chrome, all in one place. Keeping shortcuts written down and readily accessible means less time spent remembering key bindings and more time in flow. The vault is stored in <strong>iCloud Drive</strong> for seamless sync across all my devices, and also pushed to <strong>GitHub</strong> as a version-controlled backup. A root-level <code>index.md</code> lists every note with a one-line summary, making lookup fast without scanning the entire vault. Since everything is stored as plain Markdown files on disk, the vault works fully offline — I can browse and read my notes anytime without an internet connection, and Claude Code can read directly from it the same way, treating it as a local knowledge base that's always available regardless of connectivity.
                 </p>
 
                 <br>
-                <h4>Vault-Powered Claude Code</h4>
-                <p class="text-black-50">
+                <h4 data-i18n="workflow.vault-claude.title">Vault-Powered Claude Code</h4>
+                <p class="text-black-50" data-i18n="workflow.vault-claude.body">
                     My global AI configuration is managed entirely from within the vault. <code>~/.claude/CLAUDE.md</code> (which tells Claude Code how to behave across all projects) is a symlink pointing to <code>Setup/CLAUDE.md</code> inside the vault. Likewise, <code>~/.claude/commands/</code> is symlinked to the vault's <code>Claude Code Commands/</code> folder — so every custom slash command is just a Markdown file in Obsidian. Editing a command in the vault makes it instantly available in Claude Code with no restarts or manual syncing needed.
                 </p>
 
                 <br>
-                <h4>Custom Slash Commands</h4>
-                <p class="text-black-50">A library of custom slash commands drives the full development lifecycle:</p>
-                <ul class="text-black-50">
+                <h4 data-i18n="workflow.commands.title">Custom Slash Commands</h4>
+                <p class="text-black-50" data-i18n="workflow.commands.intro">A library of custom slash commands drives the full development lifecycle:</p>
+                <ul class="text-black-50" data-i18n="workflow.commands.list">
                     <li><strong>/start-claude</strong> — loads project context, reads the relevant CLAUDE.md files, and explores the codebase before any session begins</li>
                     <li><strong>/work-on-todos</strong> — reads all vault todo lists across every project, spawns up to 3 parallel <a href="https://ghostty.org" target="_blank">Ghostty</a> terminal sessions (one per repo), implements features autonomously using Claude Code, commits each change, and creates a pull request per task — all without switching windows manually</li>
                     <li><strong>/commit</strong> — stages changes and creates a commit following project-specific conventions</li>
@@ -115,21 +118,21 @@
                 </ul>
 
                 <br>
-                <h4>Git Worktrees for Parallel Ticket Work</h4>
-                <p class="text-black-50">
+                <h4 data-i18n="workflow.worktrees.title">Git Worktrees for Parallel Ticket Work</h4>
+                <p class="text-black-50" data-i18n="workflow.worktrees.body">
                     At work, I maintain up to <strong>10 active git worktrees</strong> simultaneously, each on its own branch and ticket. This lets me switch context instantly — no stashing, no waiting for builds to settle — while AI agents work independently in each worktree. Two custom commands keep this manageable:
                 </p>
-                <ul class="text-black-50">
+                <ul class="text-black-50" data-i18n="workflow.worktrees.list">
                     <li><strong>/show-worktrees</strong> — lists all active worktrees with their branch, status, and associated ticket at a glance</li>
                     <li><strong>/cleanup-worktrees</strong> — resets a finished worktree by detaching its HEAD, freeing the branch name so a fresh branch can be checked out there for the next ticket without deleting and recreating the worktree</li>
                 </ul>
-                <p class="text-black-50">
+                <p class="text-black-50" data-i18n="workflow.worktrees.bazel">
                     Since the project uses <strong>Bazel</strong> as its build system, all worktrees are configured to share the Bazel cache of the main repository. This means 10 worktrees do not mean 10× the storage — incremental build artifacts are reused across all of them, keeping disk usage lean while still getting full parallel builds.
                 </p>
 
                 <br>
-                <h4>Everything Connected</h4>
-                <p class="text-black-50">
+                <h4 data-i18n="workflow.connected.title">Everything Connected</h4>
+                <p class="text-black-50" data-i18n="workflow.connected.body">
                     The vault is the single source of truth for both human knowledge and AI behavior. When Claude Code needs context — architecture patterns, project conventions, or past decisions — it reads the vault first. New learnings flow back into the vault so they're available in every future session. This creates a feedback loop where the AI gets more effective over time, grounded in real project history rather than starting fresh each conversation.
                 </p>
             </div>
@@ -144,7 +147,7 @@
         <section class="projects-section bg-light" id="apps-ive-worked-on">
             <div class="container">
 
-                <h1>Company Apps</h1>
+                <h1 data-i18n="section.company-apps">Company Apps</h1>
                 <br>
 
                 <!-- Project 1 -->
@@ -351,7 +354,7 @@
         <!-- My Apps -->
         <section class="projects-section bg-light" id="own-apps">
             <div class="container">
-                <h1>My Apps</h1>
+                <h1 data-i18n="section.my-apps">My Apps</h1>
                 <br>
 
                 <!-- My App 1 -->
@@ -580,7 +583,7 @@
         <!-- My Blogs -->
         <section class="blogs-section bg-light" id="my-blogs">
             <div class="container">
-                <h1>My Tech Blogs</h1>
+                <h1 data-i18n="section.blogs">My Tech Blogs</h1>
                 <br>
                 <ul>
                     <li>2025/06/27<br><a href="https://engineering.mercari.com/en/blog/entry/20250625-integration-of-appintents-to-a-project-that-uses-bazel-build-system/">Integration of AppIntents to a Project that uses Bazel Build System</a></li>
@@ -606,7 +609,7 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fab fa-linkedin text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">LinkedIn</h4>
+                                <h4 class="text-uppercase m-0" data-i18n="contact.linkedin">LinkedIn</h4>
                                 <hr class="my-4" />
                                 <div class="small text-black-50"><a href="https://www.linkedin.com/in/cyanvillarin/">linkedin.com/in/cyanvillarin</a></div>
                             </div>
@@ -616,7 +619,7 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fab fa-github text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">GitHub</h4>
+                                <h4 class="text-uppercase m-0" data-i18n="contact.github">GitHub</h4>
                                 <hr class="my-4" />
                                 <div class="small text-black-50"><a href="https://github.com/cyanvillarin">github.com/cyanvillarin</a></div>
                             </div>
@@ -628,7 +631,7 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
+                                <h4 class="text-uppercase m-0" data-i18n="contact.email">Email</h4>
                                 <hr class="my-4" />
                                 <div class="small text-black-50"><a href="#!">cyanvillarin@gmail.com</a></div>
                             </div>
@@ -638,7 +641,7 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Mobile</h4>
+                                <h4 class="text-uppercase m-0" data-i18n="contact.mobile">Mobile</h4>
                                 <hr class="my-4" />
                                 <div class="small text-black-50">(+81) 70-1424-0392</div>
                             </div>
@@ -648,9 +651,9 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Address</h4>
+                                <h4 class="text-uppercase m-0" data-i18n="contact.address">Address</h4>
                                 <hr class="my-4" />
-                                <div class="small text-black-50">Fukuoka City, Japan</div>
+                                <div class="small text-black-50" data-i18n="contact.address.value">Fukuoka City, Japan</div>
                             </div>
                         </div>
                     </div>
@@ -658,7 +661,7 @@
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Cyan Villarin 2025</div></footer>
+        <footer class="footer bg-black small text-center text-white-50"><div class="container" data-i18n="footer.copyright">Copyright © Cyan Villarin 2025</div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

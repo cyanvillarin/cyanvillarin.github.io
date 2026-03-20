@@ -4,12 +4,16 @@
 // cyanvillarin.github.io
 
 document.addEventListener("DOMContentLoaded", function() {
+    const lang = getLang();
+
     const projects = [
         {
             id: 'project1',
             title: 'Mercari iOS App',
+            title_ja: 'メルカリ iOSアプリ',
             link: 'https://apps.apple.com/jp/app/id667861049',
             description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum. Key contributions include: refactored V1 TCA-like Architecture Pattern into V2 <a href='https://github.com/ra1028/swiftui-atom-properties'>Atoms</a>, migrated Design System from DS3 to DS4, migrated unit tests from XCTest to Swift Testing, developed new features for Account Opening with Coincheck, led the GetDx virtual team for developer experience improvements, served as member of the Laplace Log Schema team, learned advanced git operations (rebase, amend, cherry-pick, squash, force-push), utilized Trunk-based development with small PRs (~200 lines to master) and RemoteConfigs to enable/disable features, and performed code reviews. This is also where I adopted <a href='https://docs.anthropic.com/en/docs/claude-code/overview'>Claude Code AI</a> as a core part of my development workflow — using it for feature implementation, code reviews, test writing, and building custom slash commands that automate the full development lifecycle from task pickup to PR creation. Additionally deepened expertise in SwiftUI, Swift Concurrency (async/await), Widgets, and WidgetKit.`,
+            description_ja: `月間アクティブユーザー<a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">2,200万人</a>以上を持つ、中古品の売買やビットコイン・イーサリアムなどの暗号資産取引が可能なiOSアプリ。主な貢献：V1 TCAライクアーキテクチャパターンからV2 <a href='https://github.com/ra1028/swiftui-atom-properties'>Atoms</a>へのリファクタリング、デザインシステムDS3からDS4への移行、ユニットテストのXCTestからSwift Testingへの移行、Coincheckとの口座開設機能の新規開発、GetDxバーチャルチームの開発者体験改善のリード、Laplace Log Schemaチームのメンバー、高度なgit操作（rebase、amend、cherry-pick、squash、force-push）の習得、小規模PR（約200行でmasterへ）によるトランクベース開発とRemoteConfigsによる機能のON/OFF、コードレビューの実施。また、ここで<a href='https://docs.anthropic.com/en/docs/claude-code/overview'>Claude Code AI</a>を開発ワークフローの中核として導入し、機能実装、コードレビュー、テスト作成、タスク取得からPR作成までの開発ライフサイクルを自動化するカスタムスラッシュコマンドの構築に活用。さらにSwiftUI、Swift Concurrency（async/await）、Widgets、WidgetKitの専門性を深めた。`,
             technologies: [
                 "SwiftUI",
                 "Atoms",
@@ -49,8 +53,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'project2',
             title: 'Bunpo iOS App',
+            title_ja: 'Bunpo iOSアプリ',
             link: 'https://apps.apple.com/us/app/bunpo-learn-japanese/id1279720052',
             description: `A language learning iOS app serving over 40,000 monthly active users across Japanese, Korean, and French language courses. Led the implementation of the Quiz Tracing feature, enabling interactive character learning through touch-based tracing mechanics.`,
+            description_ja: `日本語、韓国語、フランス語のコースを提供し、月間4万人以上のアクティブユーザーを持つ語学学習iOSアプリ。タッチベースのトレーシング機能によるインタラクティブな文字学習を可能にするQuiz Tracing機能の実装をリードした。`,
             technologies: [
                 "SwiftUI",
                 "MVVM",
@@ -78,8 +84,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'project3',
             title: 'RakutenCard iOS App',
+            title_ja: '楽天カード iOSアプリ',
             link: 'https://apps.apple.com/jp/app/id570105907',
             description: `A credit card management iOS app serving over <a href="https://rakuten.today/blog/q3-fy2023-results.html">40 million</a> monthly active users. Core features include credit statement viewing, campaign management, Rakuten points tracking, revolving payment applications, and payment method updates. Managed App Store release procedures and production monitoring.`,
+            description_ja: `月間<a href="https://rakuten.today/blog/q3-fy2023-results.html">4,000万人</a>以上のアクティブユーザーを持つクレジットカード管理iOSアプリ。利用明細の確認、キャンペーン管理、楽天ポイントの追跡、リボ払い申請、支払い方法の変更などの主要機能を担当。App Storeのリリース手順と本番環境の監視も管理した。`,
             technologies: [
                 "UIKit, SwiftUI",
                 "MVVM",
@@ -106,8 +114,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'project4',
             title: 'LookMe for Family iOS App',
+            title_ja: 'LookMe for Family iOSアプリ',
             link: 'https://apps.apple.com/jp/app/id1576141035',
             description: `A parent-facing iOS app for kindergarten and nursery school communication. Enables parents to access real-time information including meal records, body temperature logs, daily activities, and school announcements, facilitating seamless home-school connectivity.`,
+            description_ja: `幼稚園・保育園の保護者向けiOSアプリ。食事記録、体温ログ、日々の活動、園からのお知らせなどのリアルタイム情報にアクセスでき、家庭と園のシームレスな連携を実現する。`,
             technologies: [
                 "UIKit",
                 "MVVM",
@@ -145,8 +155,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'project5',
             title: 'LookMe Note iOS App',
+            title_ja: 'LookMe Note iOSアプリ',
             link: 'https://apps.apple.com/jp/app/id1576141035',
             description: `A teacher-facing iOS app for kindergarten and nursery school administration. Streamlines daily data entry including meal tracking, body temperature monitoring, and sleep position documentation. Features integrated announcement broadcasting capabilities for parent communication.`,
+            description_ja: `幼稚園・保育園の教員向けiOSアプリ。食事記録、体温管理、午睡チェックなどの日常業務のデータ入力を効率化。保護者へのお知らせ配信機能も備えている。`,
             technologies: [
                 "UIKit",
                 "MVVM",
@@ -175,8 +187,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'project6',
             title: 'Globe At Home iOS App',
+            title_ja: 'Globe At Home iOSアプリ',
             link: 'https://itunes.apple.com/ph/app/globe-at-home/id1274352325?mt=8',
             description: `A telecommunications management iOS app enabling users to monitor data usage, view billing statements, purchase volume boosts and add-ons, and redeem promotional offers. Developed within a large-scale Agile environment comprising 40 team members across 5 Scrum teams, including developers, QA engineers, business analysts, and project managers.`,
+            description_ja: `データ使用量の監視、請求書の確認、ボリュームブーストやアドオンの購入、プロモーションオファーの利用を可能にする通信管理iOSアプリ。5つのスクラムチーム、40名のメンバー（開発者、QAエンジニア、ビジネスアナリスト、プロジェクトマネージャー）による大規模アジャイル環境で開発した。`,
             technologies: [
                 "UIKit",
                 "MVC",
@@ -198,7 +212,9 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'project7',
             title: 'TennisTrainer iOS App',
+            title_ja: 'TennisTrainer iOSアプリ',
             description: `A sports training iOS app enabling users to upload tennis practice session recordings and receive professional coaching insights. Developed using Agile methodologies within an 8-person cross-functional team.`,
+            description_ja: `テニスの練習セッションの録画をアップロードし、プロのコーチングインサイトを受け取れるスポーツトレーニングiOSアプリ。8名のクロスファンクショナルチームでアジャイル手法を用いて開発した。`,
             technologies: [
                 "UIKit",
                 "MVC",
@@ -226,7 +242,9 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'project8',
             title: 'Dailydronez iOS App',
+            title_ja: 'Dailydronez iOSアプリ',
             description: `A social media iOS app for the Dailydronez platform, specializing in drone photography and videography content sharing. Developed using Agile methodologies within a 6-person team.`,
+            description_ja: `ドローンによる写真・動画コンテンツの共有に特化したDailydronezプラットフォームのソーシャルメディアiOSアプリ。6名のチームでアジャイル手法を用いて開発した。`,
             technologies: [
                 "Objective-C",
                 "MVC",
@@ -253,8 +271,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp1',
             title: 'Chatzone iOS App',
+            title_ja: 'Chatzone iOSアプリ',
             link: 'https://apps.apple.com/us/app/chatzone-private-rooms/id1551793873',
             description: `A privacy-focused ephemeral messaging iOS app where all messages are AES-128 encrypted before being sent and automatically deleted after the session ends. Users create or join private rooms via room codes or QR code scanning, and can share encrypted text messages and photos in real time. Recently completed a full migration from UIKit Storyboards to SwiftUI across all screens (SelectionView, ConnectionView, MessagesView, AboutView, and Modals), replaced CocoaPods with Swift Package Manager for all dependencies (Firebase, Google AdMob, Lottie). Configured Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution, and handled the full App Store submission flow including metadata, screenshots, keywords, promotional copy, encryption compliance (ITSAppUsesNonExemptEncryption), and review guidelines. Development was driven by an Obsidian + Claude Code workflow — all tasks, migration plans, and learnings were tracked in an Obsidian vault that Claude Code reads directly as a local knowledge base, enabling AI-assisted feature implementation, code generation, and iterative development across the entire project.`,
+            description_ja: `プライバシー重視のエフェメラルメッセージングiOSアプリ。すべてのメッセージはAES-128で暗号化されてから送信され、セッション終了後に自動的に削除される。ルームコードまたはQRコードスキャンでプライベートルームを作成・参加し、暗号化されたテキストメッセージや写真をリアルタイムで共有可能。最近、全画面（SelectionView、ConnectionView、MessagesView、AboutView、Modals）をUIKit StoryboardsからSwiftUIへ完全移行し、すべての依存関係（Firebase、Google AdMob、Lottie）をCocoaPodsからSwift Package Managerに置き換えた。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、メタデータ、スクリーンショット、キーワード、プロモーションコピー、暗号化コンプライアンス（ITSAppUsesNonExemptEncryption）、審査ガイドラインを含むApp Store申請フロー全体を対応。開発はObsidian + Claude Codeワークフローで推進し、すべてのタスク、移行計画、学びをObsidian Vaultで管理。Claude Codeがローカルのナレッジベースとして直接読み込むことで、AI支援による機能実装、コード生成、プロジェクト全体の反復開発を実現した。`,
             technologies: [
                 "SwiftUI",
                 "MVVM",
@@ -284,8 +304,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp2',
             title: 'UAAP Sports iOS App',
+            title_ja: 'UAAP Sports iOSアプリ',
             link: 'https://apps.apple.com/us/app/uaap-sports/id1407677138',
             description: `A sports information iOS app providing real-time UAAP team standings, roster information, and player statistics with popularity rankings. Full-stack personal project encompassing both iOS client development and backend API implementation.`,
+            description_ja: `UAAPのチーム順位、ロスター情報、人気ランキング付き選手統計をリアルタイムで提供するスポーツ情報iOSアプリ。iOSクライアント開発とバックエンドAPI実装の両方を含むフルスタック個人プロジェクト。`,
             technologies: [
                 "UIKit",
                 "Alamofire",
@@ -313,8 +335,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp3',
             title: 'Emotions iOS App',
+            title_ja: 'Emotions iOSアプリ',
             link: 'https://apps.apple.com/us/app/emotions-quotes-and-stats/id1550042237',
             description: `A social sentiment iOS app enabling users to explore and share emotional states within a community. Features contextual quote delivery based on selected emotions, fostering emotional awareness and connection.`,
+            description_ja: `コミュニティ内で感情状態を探索・共有できるソーシャルセンチメントiOSアプリ。選択した感情に基づくコンテキスト別の名言配信機能により、感情の気づきとつながりを育む。`,
             technologies: [
                 "UIKit",
                 "Firebase Analytics",
@@ -332,8 +356,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp5',
             title: 'Savings - Track Your Money',
+            title_ja: 'Savings - 資産を記録',
             link: 'https://apps.apple.com/us/app/savings-track-your-money/id6760301607',
             description: `A personal asset tracking iOS app for recording snapshots of total assets over time and visualizing financial progress. Features interactive charts across multiple time periods (1W, 1M, 3M, 6M, 1Y, All), home screen widgets showing latest balance and savings chart, support for 16 currencies, and privacy-first design with all data stored on-device via SwiftData. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
+            description_ja: `総資産のスナップショットを時系列で記録し、財務の進捗を可視化する個人資産管理iOSアプリ。複数の期間（1W、1M、3M、6M、1Y、All）にわたるインタラクティブチャート、最新残高と貯蓄チャートを表示するホーム画面ウィジェット、16通貨のサポート、SwiftDataによるオンデバイスデータ保存のプライバシーファーストな設計が特徴。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、メタデータ、キーワード、プロモーションコピーを含むApp Store申請を準備した。`,
             technologies: [
                 "SwiftUI",
                 "SwiftData",
@@ -356,8 +382,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp6',
             title: 'Earnings – Track Your Pay',
+            title_ja: 'Earnings – 給料を追跡',
             link: 'https://apps.apple.com/us/app/earnings-realtime-tracking/id6760335853',
             description: `A real-time earnings tracker iOS app that shows exactly how much money users have earned since starting their job, updating live to the second. Set income, working days, and hours once, and the app calculates precise workday-based earnings. Features home screen widgets, a live per-second rate animation, and progress views for the current hour, day, week, month, or year. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
+            description_ja: `仕事開始からの稼ぎを秒単位でリアルタイム表示する収入トラッカーiOSアプリ。収入、勤務日、勤務時間を一度設定するだけで、営業日ベースの正確な収入を計算する。ホーム画面ウィジェット、秒単位のライブレートアニメーション、現在の時間・日・週・月・年の進捗ビューが特徴。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、App Store申請を準備した。`,
             technologies: [
                 "SwiftUI",
                 "SwiftData",
@@ -380,8 +408,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp7',
             title: 'Mazda Phone Wallpapers',
+            title_ja: 'Mazda スマホ壁紙',
             link: 'https://mazdaphonewallpapers.web.app',
             description: `A curated gallery website offering free high-resolution Mazda phone wallpapers. Each wallpaper is crafted at full 1320×2868px resolution to fit modern iPhone screens perfectly. Built as a clean, browseable gallery with individual wallpaper pages.`,
+            description_ja: `高解像度のマツダスマホ壁紙を無料で提供するキュレーションギャラリーサイト。各壁紙は1320×2868pxのフル解像度で作成され、最新のiPhone画面にぴったりフィットする。個別の壁紙ページを持つクリーンで閲覧しやすいギャラリーとして構築。`,
             technologies: [
                 "HTML",
                 "CSS",
@@ -400,8 +430,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp8',
             title: 'Mazda Universe Blog',
+            title_ja: 'Mazda Universe ブログ',
             link: 'https://mazdauniverse.web.app',
             description: `A blog website dedicated to Mazda cars, featuring articles on ownership tips, accessories, and driving experiences. Each article has its own page with cover image, table of contents, and related links. Built with plain HTML and CSS for fast, lightweight delivery.`,
+            description_ja: `マツダ車に特化したブログサイト。オーナーシップのコツ、アクセサリー、ドライブ体験に関する記事を掲載。各記事にはカバー画像、目次、関連リンク付きの個別ページがある。高速で軽量な配信のためにプレーンHTMLとCSSで構築。`,
             technologies: [
                 "HTML",
                 "CSS",
@@ -422,8 +454,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp9',
             title: 'Eyes of the Gods',
+            title_ja: 'Eyes of the Gods',
             link: 'https://eyesofthegods.web.app',
             description: `A theatrical web app styled as a global surveillance dashboard. Features a 3D interactive globe powered by Three.js and globe.gl, with clickable location nodes that open live YouTube video feeds styled as spy-cam surveillance streams.`,
+            description_ja: `グローバル監視ダッシュボード風のシアトリカルなWebアプリ。Three.jsとglobe.glによる3Dインタラクティブ地球儀を搭載し、クリック可能なロケーションノードからスパイカム風のライブYouTube動画フィードを開く。`,
             technologies: [
                 "HTML",
                 "CSS",
@@ -443,8 +477,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp2',
             title: 'UAAP Sports iOS App',
+            title_ja: 'UAAP Sports iOSアプリ',
             link: 'https://apps.apple.com/us/app/uaap-sports/id1407677138',
             description: `A sports information iOS app providing real-time UAAP team standings, roster information, and player statistics with popularity rankings. Full-stack personal project encompassing both iOS client development and backend API implementation.`,
+            description_ja: `UAAPのチーム順位、ロスター情報、人気ランキング付き選手統計をリアルタイムで提供するスポーツ情報iOSアプリ。iOSクライアント開発とバックエンドAPI実装の両方を含むフルスタック個人プロジェクト。`,
             technologies: [
                 "UIKit",
                 "Alamofire",
@@ -472,8 +508,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp3',
             title: 'Emotions iOS App',
+            title_ja: 'Emotions iOSアプリ',
             link: 'https://apps.apple.com/us/app/emotions-quotes-and-stats/id1550042237',
             description: `A social sentiment iOS app enabling users to explore and share emotional states within a community. Features contextual quote delivery based on selected emotions, fostering emotional awareness and connection.`,
+            description_ja: `コミュニティ内で感情状態を探索・共有できるソーシャルセンチメントiOSアプリ。選択した感情に基づくコンテキスト別の名言配信機能により、感情の気づきとつながりを育む。`,
             technologies: [
                 "UIKit",
                 "Firebase Analytics",
@@ -491,8 +529,10 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 'myApp4',
             title: 'Happisa iOS App',
+            title_ja: 'Happisa iOSアプリ',
             link: 'https://apps.apple.com/bn/app/happisa-worlds-happiness/id1551291796',
             description: `A global happiness tracking iOS app facilitating emotional awareness and community connection. Users submit their happiness status with optional reasoning, enabling exploration of worldwide sentiment patterns and shared experiences.`,
+            description_ja: `感情の気づきとコミュニティのつながりを促進するグローバル幸福度トラッキングiOSアプリ。ユーザーは任意の理由付きで幸福度を送信し、世界中のセンチメントパターンや共有体験を探索できる。`,
             technologies: [
                 "UIKit",
                 "Firebase Analytics",
@@ -513,6 +553,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const projectContainer = document.getElementById(project.id);
         const carouselInner = document.getElementById(project.carouselId);
         const technologiesList = project.technologies.join(', ');
+        const title = (lang === 'ja' && project.title_ja) ? project.title_ja : project.title;
+        const description = (lang === 'ja' && project.description_ja) ? project.description_ja : project.description;
 
         // Separate videos and images
         const videos = project.images.filter(src =>
@@ -610,12 +652,12 @@ document.addEventListener("DOMContentLoaded", function() {
         // Update project title, technologies, and description
         const projectTitle = projectContainer.querySelector('.featured-text');
         projectTitle.innerHTML = `
-            <h4><a href="${project.link}">${project.title}</a></h4>
+            <h4><a href="${project.link}">${title}</a></h4>
             <p class="text-black-50 mb-0" style="margin-top: 0.625rem;">
                 <em>${technologiesList}</em>
             </p>
             <p class="text-black-50 mb-0" style="margin-top: 0.625rem;">
-                ${project.description}
+                ${description}
             </p>
         `;
     }

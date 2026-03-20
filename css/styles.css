@@ -10161,8 +10161,9 @@ body {
   }
   #mainNav .nav-link {
     transition: none;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
     color: rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -10178,8 +10179,9 @@ body {
   }
   #mainNav.navbar-shrink .nav-link {
     color: #000000;
-    padding: 1.5rem 1.5rem 1.25rem;
+    padding: 1.5rem 1rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
+    white-space: nowrap;
   }
   #mainNav.navbar-shrink .nav-link:hover {
     color: #64a19d;
