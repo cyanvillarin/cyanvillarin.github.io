@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'project1',
             title: 'Mercari iOS App',
             link: 'https://apps.apple.com/jp/app/id667861049',
-            description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum. Key contributions include: refactored V1 TCA-like Architecture Pattern into V2 <a href='https://github.com/ra1028/swiftui-atom-properties'>Atoms</a>, migrated Design System from DS3 to DS4, migrated unit tests from XCTest to Swift Testing, developed new features for Account Opening with Coincheck, led the GetDx virtual team for developer experience improvements, served as member of the Laplace Log Schema team, learned advanced git operations (rebase, amend, cherry-pick, squash, force-push), utilized Trunk-based development with small PRs (~200 lines to master) and RemoteConfigs to enable/disable features, and performed code reviews.`,
+            description: `An iOS app, with over <a href="https://www.morningstar.com/company-reports/1223104-mercari-is-still-focused-on-growth-but-maintaining-healthy-margins">22 million</a> monthly active users, that allows for buying and selling used items, as well as cryptocurrencies like Bitcoin and Ethereum. Key contributions include: refactored V1 TCA-like Architecture Pattern into V2 <a href='https://github.com/ra1028/swiftui-atom-properties'>Atoms</a>, migrated Design System from DS3 to DS4, migrated unit tests from XCTest to Swift Testing, developed new features for Account Opening with Coincheck, led the GetDx virtual team for developer experience improvements, served as member of the Laplace Log Schema team, learned advanced git operations (rebase, amend, cherry-pick, squash, force-push), utilized Trunk-based development with small PRs (~200 lines to master) and RemoteConfigs to enable/disable features, and performed code reviews. This is also where I adopted <a href='https://docs.anthropic.com/en/docs/claude-code/overview'>Claude Code AI</a> as a core part of my development workflow — using it for feature implementation, code reviews, test writing, and building custom slash commands that automate the full development lifecycle from task pickup to PR creation. Additionally deepened expertise in SwiftUI, Swift Concurrency (async/await), Widgets, and WidgetKit.`,
             technologies: [
                 "SwiftUI",
                 "Atoms",
@@ -254,15 +254,20 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'myApp1',
             title: 'Chatzone iOS App',
             link: 'https://apps.apple.com/us/app/chatzone-private-rooms/id1551793873',
-            description: `A secure ephemeral messaging iOS app designed for privacy-focused communication. Features automatic message deletion to ensure sensitive information is not persistently stored, providing users with enhanced security for confidential exchanges.`,
+            description: `A privacy-focused ephemeral messaging iOS app where all messages are AES-128 encrypted before being sent and automatically deleted after the session ends. Users create or join private rooms via room codes or QR code scanning, and can share encrypted text messages and photos in real time. Recently completed a full migration from UIKit Storyboards to SwiftUI across all screens (SelectionView, ConnectionView, MessagesView, AboutView, and Modals), replaced CocoaPods with Swift Package Manager for all dependencies (Firebase, Google AdMob, Lottie). Configured Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution, and handled the full App Store submission flow including metadata, screenshots, keywords, promotional copy, encryption compliance (ITSAppUsesNonExemptEncryption), and review guidelines. Development was driven by an Obsidian + Claude Code workflow — all tasks, migration plans, and learnings were tracked in an Obsidian vault that Claude Code reads directly as a local knowledge base, enabling AI-assisted feature implementation, code generation, and iterative development across the entire project.`,
             technologies: [
-                "UIKit",
+                "SwiftUI",
                 "MVVM",
+                "Combine",
+                "AES-128 Encryption",
                 "Xcode Cloud",
                 "Firebase Analytics",
                 "Firebase Realtime Database",
                 "Firebase RemoteConfigs",
+                "Firebase Cloud Messaging",
                 "Google AdMob",
+                "Lottie",
+                "Swift Package Manager",
                 "Xcode Build System"
             ],
             carouselId: 'myAppsCarouselInner1',
@@ -273,9 +278,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 "assets/own-apps/1-chatzone/chatzone-3.png",
                 "assets/own-apps/1-chatzone/chatzone-4.png",
                 "assets/own-apps/1-chatzone/chatzone-5.png",
-                "assets/own-apps/1-chatzone/chatzone-6.png",
-                "assets/own-apps/1-chatzone/chatzone-7.png",
-                "assets/own-apps/1-chatzone/chatzone-8.png"
+                "assets/own-apps/1-chatzone/chatzone-6.png"
             ]
         },
         {
