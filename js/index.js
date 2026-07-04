@@ -270,36 +270,69 @@ document.addEventListener("DOMContentLoaded", function() {
     const myApps = [
         {
             id: 'myApp1',
-            title: 'Chatzone iOS App',
-            title_ja: 'Chatzone iOSアプリ',
+            title: 'Chatzone App (iOS & Android)',
+            title_ja: 'Chatzone アプリ（iOS・Android）',
             link: 'https://apps.apple.com/us/app/chatzone-private-rooms/id1551793873',
-            description: `A privacy-focused ephemeral messaging iOS app where all messages are encrypted before being sent and automatically deleted after the session ends. Users create or join private rooms via room codes or QR code scanning, and can share encrypted text messages and photos in real time. Recently replaced hardcoded AES-128 keys with Diffie-Hellman key exchange (ECDH via CryptoKit) to securely derive AES-GCM encryption keys without transmitting secrets over the network. Also implemented Firebase Realtime Database security rules to enforce room-level access control, anonymous authentication, and secret whitelist validation. Completed a full migration from UIKit Storyboards to SwiftUI across all screens (SelectionView, ConnectionView, MessagesView, AboutView, and Modals), replaced CocoaPods with Swift Package Manager for all dependencies (Firebase, Google AdMob, Lottie). Configured Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution, and handled the full App Store submission flow including metadata, screenshots, keywords, promotional copy, encryption compliance (ITSAppUsesNonExemptEncryption), and review guidelines. Development was driven by an Obsidian + Claude Code workflow — all tasks, migration plans, and learnings were tracked in an Obsidian vault that Claude Code reads directly as a local knowledge base, enabling AI-assisted feature implementation, code generation, and iterative development across the entire project.`,
-            description_ja: `プライバシー重視のエフェメラルメッセージングiOSアプリ。すべてのメッセージは暗号化されてから送信され、セッション終了後に自動的に削除される。ルームコードまたはQRコードスキャンでプライベートルームを作成・参加し、暗号化されたテキストメッセージや写真をリアルタイムで共有可能。最近、ハードコードされたAES-128鍵をDiffie-Hellman鍵交換（CryptoKitによるECDH）に置き換え、ネットワーク上で秘密鍵を送信せずにAES-GCM暗号化鍵を安全に導出する仕組みを実現。また、Firebase Realtime Databaseセキュリティルールを実装し、ルームレベルのアクセス制御、匿名認証、シークレットホワイトリスト検証を強化。全画面（SelectionView、ConnectionView、MessagesView、AboutView、Modals）をUIKit StoryboardsからSwiftUIへ完全移行し、すべての依存関係（Firebase、Google AdMob、Lottie）をCocoaPodsからSwift Package Managerに置き換えた。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、メタデータ、スクリーンショット、キーワード、プロモーションコピー、暗号化コンプライアンス（ITSAppUsesNonExemptEncryption）、審査ガイドラインを含むApp Store申請フロー全体を対応。開発はObsidian + Claude Codeワークフローで推進し、すべてのタスク、移行計画、学びをObsidian Vaultで管理。Claude Codeがローカルのナレッジベースとして直接読み込むことで、AI支援による機能実装、コード生成、プロジェクト全体の反復開発を実現した。`,
-            technologies: [
-                "SwiftUI",
-                "MVVM",
-                "Combine",
-                "AES-GCM Encryption",
-                "Diffie-Hellman Key Exchange (ECDH)",
-                "Xcode Cloud",
-                "Firebase Analytics",
-                "Firebase Realtime Database",
-                "Firebase RemoteConfigs",
-                "Firebase Cloud Messaging",
-                "Google AdMob",
-                "Lottie",
-                "Swift Package Manager",
-                "Xcode Build System"
-            ],
-            carouselId: 'myAppsCarouselInner1',
-            images: [
-                "assets/own-apps/1-chatzone/chatzone-0.png",
-                "assets/own-apps/1-chatzone/chatzone-1.png",
-                "assets/own-apps/1-chatzone/chatzone-2.png",
-                "assets/own-apps/1-chatzone/chatzone-3.png",
-                "assets/own-apps/1-chatzone/chatzone-4.png",
-                "assets/own-apps/1-chatzone/chatzone-5.png",
-                "assets/own-apps/1-chatzone/chatzone-6.png"
+            platforms: [
+                {
+                    id: 'myApp1-ios',
+                    name: 'iOS',
+                    name_ja: 'iOS版',
+                    description: `A privacy-focused ephemeral messaging iOS app where all messages are encrypted before being sent and automatically deleted after the session ends. Users create or join private rooms via room codes or QR code scanning, and can share encrypted text messages and photos in real time. Recently replaced hardcoded AES-128 keys with Diffie-Hellman key exchange (ECDH via CryptoKit) to securely derive AES-GCM encryption keys without transmitting secrets over the network. Also implemented Firebase Realtime Database security rules to enforce room-level access control, anonymous authentication, and secret whitelist validation. Completed a full migration from UIKit Storyboards to SwiftUI across all screens (SelectionView, ConnectionView, MessagesView, AboutView, and Modals), replaced CocoaPods with Swift Package Manager for all dependencies (Firebase, Google AdMob, Lottie). Configured Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution, and handled the full App Store submission flow including metadata, screenshots, keywords, promotional copy, encryption compliance (ITSAppUsesNonExemptEncryption), and review guidelines. Development was driven by an Obsidian + Claude Code workflow — all tasks, migration plans, and learnings were tracked in an Obsidian vault that Claude Code reads directly as a local knowledge base, enabling AI-assisted feature implementation, code generation, and iterative development across the entire project.`,
+                    description_ja: `プライバシー重視のエフェメラルメッセージングiOSアプリ。すべてのメッセージは暗号化されてから送信され、セッション終了後に自動的に削除される。ルームコードまたはQRコードスキャンでプライベートルームを作成・参加し、暗号化されたテキストメッセージや写真をリアルタイムで共有可能。最近、ハードコードされたAES-128鍵をDiffie-Hellman鍵交換（CryptoKitによるECDH）に置き換え、ネットワーク上で秘密鍵を送信せずにAES-GCM暗号化鍵を安全に導出する仕組みを実現。また、Firebase Realtime Databaseセキュリティルールを実装し、ルームレベルのアクセス制御、匿名認証、シークレットホワイトリスト検証を強化。全画面（SelectionView、ConnectionView、MessagesView、AboutView、Modals）をUIKit StoryboardsからSwiftUIへ完全移行し、すべての依存関係（Firebase、Google AdMob、Lottie）をCocoaPodsからSwift Package Managerに置き換えた。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、メタデータ、スクリーンショット、キーワード、プロモーションコピー、暗号化コンプライアンス（ITSAppUsesNonExemptEncryption）、審査ガイドラインを含むApp Store申請フロー全体を対応。開発はObsidian + Claude Codeワークフローで推進し、すべてのタスク、移行計画、学びをObsidian Vaultで管理。Claude Codeがローカルのナレッジベースとして直接読み込むことで、AI支援による機能実装、コード生成、プロジェクト全体の反復開発を実現した。`,
+                    technologies: [
+                        "SwiftUI",
+                        "MVVM",
+                        "Combine",
+                        "AES-GCM Encryption",
+                        "Diffie-Hellman Key Exchange (ECDH)",
+                        "Xcode Cloud",
+                        "Firebase Analytics",
+                        "Firebase Realtime Database",
+                        "Firebase RemoteConfigs",
+                        "Firebase Cloud Messaging",
+                        "Google AdMob",
+                        "Lottie",
+                        "Swift Package Manager",
+                        "Xcode Build System"
+                    ],
+                    carouselId: 'myAppsCarouselInner1',
+                    images: [
+                        "assets/own-apps/1-chatzone/chatzone-0.png",
+                        "assets/own-apps/1-chatzone/chatzone-1.png",
+                        "assets/own-apps/1-chatzone/chatzone-2.png",
+                        "assets/own-apps/1-chatzone/chatzone-3.png",
+                        "assets/own-apps/1-chatzone/chatzone-4.png",
+                        "assets/own-apps/1-chatzone/chatzone-5.png",
+                        "assets/own-apps/1-chatzone/chatzone-6.png"
+                    ]
+                },
+                {
+                    id: 'myApp1-android',
+                    name: 'Android',
+                    name_ja: 'Android版',
+                    description: `The Android version of Chatzone, currently in active development, bringing the same privacy-focused ephemeral messaging experience to Android devices. Built with Kotlin and Jetpack Compose using MVVM architecture, it connects to the same Firebase Realtime Database backend as the iOS app, so iOS and Android users can create and join the same private rooms via room codes or QR code scanning. Implements the same cross-platform security model as the iOS version — Diffie-Hellman key exchange (ECDH) to securely derive AES-GCM encryption keys without transmitting secrets over the network — so messages stay encrypted end-to-end across platforms and are automatically deleted after the session ends. Development follows the same Obsidian + Claude Code workflow used on the iOS app, with all tasks, plans, and learnings tracked in an Obsidian vault that Claude Code reads directly as a local knowledge base for AI-assisted feature implementation and iterative development.`,
+                    description_ja: `現在開発中のChatzone Android版。プライバシー重視のエフェメラルメッセージング体験をAndroidデバイスにも提供する。KotlinとJetpack Composeを使用しMVVMアーキテクチャで構築され、iOSアプリと同じFirebase Realtime Databaseバックエンドに接続するため、iOSとAndroidのユーザーがルームコードやQRコードスキャンで同じプライベートルームを作成・参加できる。iOS版と同じクロスプラットフォームセキュリティモデル — Diffie-Hellman鍵交換（ECDH）によりネットワーク上で秘密鍵を送信せずにAES-GCM暗号化鍵を安全に導出 — を実装し、メッセージはプラットフォームを越えてエンドツーエンドで暗号化され、セッション終了後に自動的に削除される。開発はiOSアプリと同じObsidian + Claude Codeワークフローで推進し、すべてのタスク、計画、学びをObsidian Vaultで管理。Claude Codeがローカルのナレッジベースとして直接読み込むことで、AI支援による機能実装と反復開発を実現している。`,
+                    technologies: [
+                        "Kotlin",
+                        "Jetpack Compose",
+                        "MVVM",
+                        "Kotlin Coroutines & Flow",
+                        "AES-GCM Encryption",
+                        "Diffie-Hellman Key Exchange (ECDH)",
+                        "Firebase Analytics",
+                        "Firebase Realtime Database",
+                        "Google AdMob",
+                        "Gradle Build System",
+                        "Android Studio"
+                    ],
+                    carouselId: 'myAppsCarouselInner1Android',
+                    placeholderCount: 3,
+                    images: [
+                        // Placeholder — Android screenshots coming soon.
+                        // Add paths like "assets/own-apps/1-chatzone/android/chatzone-android-0.png" here.
+                    ]
+                }
             ]
         },
         {
@@ -550,12 +583,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     ];
 
-    function createProject(project) {
-        const projectContainer = document.getElementById(project.id);
+    function renderCarousel(project) {
         const carouselInner = document.getElementById(project.carouselId);
-        const technologiesList = project.technologies.join(', ');
-        const title = (lang === 'ja' && project.title_ja) ? project.title_ja : project.title;
-        const description = (lang === 'ja' && project.description_ja) ? project.description_ja : project.description;
 
         // Separate videos and images
         const videos = project.images.filter(src =>
@@ -649,9 +678,46 @@ document.addEventListener("DOMContentLoaded", function() {
             itemDiv.appendChild(imgRow);
             carouselInner.appendChild(itemDiv);
         }
+    }
+
+    function createProject(project) {
+        const projectContainer = document.getElementById(project.id);
+        const title = (lang === 'ja' && project.title_ja) ? project.title_ja : project.title;
+        const projectTitle = projectContainer.querySelector('.featured-text');
+
+        // Projects with platform subsections (e.g. iOS / Android)
+        if (project.platforms) {
+            projectTitle.innerHTML = `
+                <h4><a href="${project.link}">${title}</a></h4>
+            `;
+
+            project.platforms.forEach(platform => {
+                const platformContainer = document.getElementById(platform.id);
+                const platformName = (lang === 'ja' && platform.name_ja) ? platform.name_ja : platform.name;
+                const platformDescription = (lang === 'ja' && platform.description_ja) ? platform.description_ja : platform.description;
+                const platformTechnologies = platform.technologies.join(', ');
+
+                platformContainer.querySelector('.featured-text').innerHTML = `
+                    <h5 style="margin-top: 0.9375rem;">${platformName}</h5>
+                    <p class="text-black-50 mb-0" style="margin-top: 0.625rem;">
+                        <em>${platformTechnologies}</em>
+                    </p>
+                    <p class="text-black-50 mb-0" style="margin-top: 0.625rem;">
+                        ${platformDescription}
+                    </p>
+                `;
+
+                renderCarousel(platform);
+            });
+            return;
+        }
+
+        const technologiesList = project.technologies.join(', ');
+        const description = (lang === 'ja' && project.description_ja) ? project.description_ja : project.description;
+
+        renderCarousel(project);
 
         // Update project title, technologies, and description
-        const projectTitle = projectContainer.querySelector('.featured-text');
         projectTitle.innerHTML = `
             <h4><a href="${project.link}">${title}</a></h4>
             <p class="text-black-50 mb-0" style="margin-top: 0.625rem;">
