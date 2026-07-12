@@ -51,7 +51,7 @@
             <div class="container d-flex h-100 align-items-center">
                 <div class="mx-auto text-center">
                     <h1 class="mx-auto my-0 text-uppercase">Cyan Villarin</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5" data-i18n="masthead.subtitle">SENIOR IOS ENGINEER</h2>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5" data-i18n="masthead.subtitle">SENIOR MOBILE APP ENGINEER</h2>
                     <a class="btn btn-primary js-scroll-trigger" href="#about" data-i18n="masthead.cta">Learn more</a>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                     <div class="col-lg-8 mx-auto">
                         <h2 class="text-white mb-4" data-i18n="about.greeting">Greetings!</h2>
                         <p class="text-white-50" style="margin-bottom: 0.5rem;" data-i18n="about.bio">
-                            I am a Senior iOS Developer, based in Japan, with over 7 years of professional experience building customer-facing iOS apps using Swift. I specialize in creating apps that deliver meaningful impact to users' lives, particularly for large-scale user bases where attention to detail and reliability are critical. As a strong advocate of Agile Scrum methodologies, I believe in iterative development and continuous improvement. Beyond iOS development, I maintain a keen curiosity for UI/UX design principles, database architecture, and backend development, actively learning how these systems work to facilitate smooth project execution.
+                            I am a Senior Mobile App Engineer, based in Japan, with over 7 years of professional experience building customer-facing iOS apps using Swift. This year, I expanded into Android development as well — an expansion greatly accelerated by AI-assisted workflows. I now have my own Google Play Store developer account with three Android apps uploaded: Chatzone, Earnings, and Savings (all currently in active development). Learning everything needed to publish an app to the Google Play Store — app signing, release tracks, store listings, and Play Console review — was a genuinely fun experience. I specialize in creating apps that deliver meaningful impact to users' lives, particularly for large-scale user bases where attention to detail and reliability are critical. As a strong advocate of Agile Scrum methodologies, I believe in iterative development and continuous improvement. Beyond mobile development, I maintain a keen curiosity for UI/UX design principles, database architecture, and backend development, actively learning how these systems work to facilitate smooth project execution.
                         </p>
                         <!-- GitHub Activity Section -->
                         <div class="mb-4">
@@ -76,7 +76,7 @@
                             At work, we leverage GitHub for version control and collaborative development. The above snapshots of my GitHub contributions reflect consistent engagement with code review, feature development, and collaborative engineering practices.
                         </p>
                         <p class="text-white-50" style="margin-bottom: 14rem;" data-i18n="about.interests">
-                            I maintain a keen interest in health and fitness, recognizing that personal well-being is fundamental to both personal and professional excellence. Beyond technology, I cultivate curiosity in diverse fields including astronomy and marine biology. I have several iOS apps available on the <a href="https://apps.apple.com/us/developer/cyan-villarin/id1407677137">App Store</a>, all optimized for both iPhone and iPad platforms.
+                            I maintain a keen interest in health and fitness, recognizing that personal well-being is fundamental to both personal and professional excellence. Beyond technology, I cultivate curiosity in diverse fields including astronomy and marine biology. I have several iOS apps available on the <a href="https://apps.apple.com/us/developer/cyan-villarin/id1407677137">App Store</a>, all optimized for both iPhone and iPad platforms, and Android apps on the Google Play Store under my own developer account.
                         </p>
                     </div>
                 </div>
@@ -128,6 +128,12 @@
                 </ul>
                 <p class="text-black-50" data-i18n="workflow.worktrees.bazel">
                     Since the project uses <strong>Bazel</strong> as its build system, all worktrees are configured to share the Bazel cache of the main repository. This means 10 worktrees do not mean 10× the storage — incremental build artifacts are reused across all of them, keeping disk usage lean while still getting full parallel builds.
+                </p>
+
+                <br>
+                <h4 data-i18n="workflow.android.title">Expanding into Android with AI</h4>
+                <p class="text-black-50" data-i18n="workflow.android.body">
+                    AI hasn't just made me faster at iOS — it has expanded what I can build. This year I started Android development, and with AI-assisted workflows flattening the Kotlin and Jetpack Compose learning curve, I was able to move at a pace that would have taken far longer on my own. I created my own <strong>Google Play Store developer account</strong> and uploaded three Android apps — <strong>Chatzone</strong>, <strong>Earnings</strong>, and <strong>Savings</strong> — learning the full publishing pipeline along the way: app signing, release tracks, store listings, content ratings, and Play Console review. It was a genuinely fun experience, and it means I can now deliver the same product on both iOS and Android.
                 </p>
 
                 <br>
@@ -417,16 +423,45 @@
                             <!-- My App 5 name will be updated by JavaScript -->
                         </div>
                     </div>
+
+                    <!-- My App 5: iOS subsection -->
+                    <div class="col-12" id="myApp5-ios">
+                        <div class="featured-text text-left">
+                            <!-- Savings iOS details will be updated by JavaScript -->
+                        </div>
+                    </div>
                     <div class="col-12 mt-3">
                         <div id="myAppsCarousel5" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner" id="myAppsCarouselInner5">
-                                <!-- Carousel items for My App 5 will be injected here by JavaScript -->
+                                <!-- Carousel items for Savings iOS will be injected here by JavaScript -->
                             </div>
                             <a class="carousel-control-prev" href="#myAppsCarousel5" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#myAppsCarousel5" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- My App 5: Android subsection -->
+                    <div class="col-12 mt-4" id="myApp5-android">
+                        <div class="featured-text text-left">
+                            <!-- Savings Android details will be updated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div id="myAppsCarousel5Android" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner" id="myAppsCarouselInner5Android">
+                                <!-- Carousel items for Savings Android will be injected here by JavaScript -->
+                            </div>
+                            <a class="carousel-control-prev" href="#myAppsCarousel5Android" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myAppsCarousel5Android" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
@@ -441,16 +476,45 @@
                             <!-- My App 6 name will be updated by JavaScript -->
                         </div>
                     </div>
+
+                    <!-- My App 6: iOS subsection -->
+                    <div class="col-12" id="myApp6-ios">
+                        <div class="featured-text text-left">
+                            <!-- Earnings iOS details will be updated by JavaScript -->
+                        </div>
+                    </div>
                     <div class="col-12 mt-3">
                         <div id="myAppsCarousel6" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner" id="myAppsCarouselInner6">
-                                <!-- Carousel items for My App 6 will be injected here by JavaScript -->
+                                <!-- Carousel items for Earnings iOS will be injected here by JavaScript -->
                             </div>
                             <a class="carousel-control-prev" href="#myAppsCarousel6" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#myAppsCarousel6" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- My App 6: Android subsection -->
+                    <div class="col-12 mt-4" id="myApp6-android">
+                        <div class="featured-text text-left">
+                            <!-- Earnings Android details will be updated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div id="myAppsCarousel6Android" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner" id="myAppsCarouselInner6Android">
+                                <!-- Carousel items for Earnings Android will be injected here by JavaScript -->
+                            </div>
+                            <a class="carousel-control-prev" href="#myAppsCarousel6Android" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myAppsCarousel6Android" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>

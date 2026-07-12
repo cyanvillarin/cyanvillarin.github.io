@@ -13,14 +13,14 @@ const translations = {
         "nav.contact": "Contact Me",
 
         // Masthead
-        "masthead.subtitle": "SENIOR IOS ENGINEER",
+        "masthead.subtitle": "SENIOR MOBILE APP ENGINEER",
         "masthead.cta": "Learn more",
 
         // About
         "about.greeting": "Greetings!",
-        "about.bio": `I am a Senior iOS Developer, based in Japan, with over 7 years of professional experience building customer-facing iOS apps using Swift. I specialize in creating apps that deliver meaningful impact to users' lives, particularly for large-scale user bases where attention to detail and reliability are critical. As a strong advocate of Agile Scrum methodologies, I believe in iterative development and continuous improvement. Beyond iOS development, I maintain a keen curiosity for UI/UX design principles, database architecture, and backend development, actively learning how these systems work to facilitate smooth project execution.`,
+        "about.bio": `I am a Senior Mobile App Engineer, based in Japan, with over 7 years of professional experience building customer-facing iOS apps using Swift. This year, I expanded into Android development as well — an expansion greatly accelerated by AI-assisted workflows. I now have my own Google Play Store developer account with three Android apps uploaded: Chatzone, Earnings, and Savings (all currently in active development). Learning everything needed to publish an app to the Google Play Store — app signing, release tracks, store listings, and Play Console review — was a genuinely fun experience. I specialize in creating apps that deliver meaningful impact to users' lives, particularly for large-scale user bases where attention to detail and reliability are critical. As a strong advocate of Agile Scrum methodologies, I believe in iterative development and continuous improvement. Beyond mobile development, I maintain a keen curiosity for UI/UX design principles, database architecture, and backend development, actively learning how these systems work to facilitate smooth project execution.`,
         "about.github": `At work, we leverage GitHub for version control and collaborative development. The above snapshots of my GitHub contributions reflect consistent engagement with code review, feature development, and collaborative engineering practices.`,
-        "about.interests": `I maintain a keen interest in health and fitness, recognizing that personal well-being is fundamental to both personal and professional excellence. Beyond technology, I cultivate curiosity in diverse fields including astronomy and marine biology. I have several iOS apps available on the <a href="https://apps.apple.com/us/developer/cyan-villarin/id1407677137">App Store</a>, all optimized for both iPhone and iPad platforms.`,
+        "about.interests": `I maintain a keen interest in health and fitness, recognizing that personal well-being is fundamental to both personal and professional excellence. Beyond technology, I cultivate curiosity in diverse fields including astronomy and marine biology. I have several iOS apps available on the <a href="https://apps.apple.com/us/developer/cyan-villarin/id1407677137">App Store</a>, all optimized for both iPhone and iPad platforms, and Android apps on the Google Play Store under my own developer account.`,
 
         // My Workflow
         "workflow.title": "My Workflow",
@@ -43,6 +43,8 @@ const translations = {
         "workflow.worktrees.list": `<li><strong>/show-worktrees</strong> — lists all active worktrees with their branch, status, and associated ticket at a glance</li>
                     <li><strong>/cleanup-worktrees</strong> — resets a finished worktree by detaching its HEAD, freeing the branch name so a fresh branch can be checked out there for the next ticket without deleting and recreating the worktree</li>`,
         "workflow.worktrees.bazel": `Since the project uses <strong>Bazel</strong> as its build system, all worktrees are configured to share the Bazel cache of the main repository. This means 10 worktrees do not mean 10× the storage — incremental build artifacts are reused across all of them, keeping disk usage lean while still getting full parallel builds.`,
+        "workflow.android.title": "Expanding into Android with AI",
+        "workflow.android.body": `AI hasn't just made me faster at iOS — it has expanded what I can build. This year I started Android development, and with AI-assisted workflows flattening the Kotlin and Jetpack Compose learning curve, I was able to move at a pace that would have taken far longer on my own. I created my own <strong>Google Play Store developer account</strong> and uploaded three Android apps — <strong>Chatzone</strong>, <strong>Earnings</strong>, and <strong>Savings</strong> — learning the full publishing pipeline along the way: app signing, release tracks, store listings, content ratings, and Play Console review. It was a genuinely fun experience, and it means I can now deliver the same product on both iOS and Android.`,
         "workflow.connected.title": "Everything Connected",
         "workflow.connected.body": `The vault is the single source of truth for both human knowledge and AI behavior. When Claude Code needs context — architecture patterns, project conventions, or past decisions — it reads the vault first. New learnings flow back into the vault so they're available in every future session. This creates a feedback loop where the AI gets more effective over time, grounded in real project history rather than starting fresh each conversation.`,
 
@@ -72,14 +74,14 @@ const translations = {
         "nav.contact": "連絡先",
 
         // Masthead
-        "masthead.subtitle": "シニア iOS エンジニア",
+        "masthead.subtitle": "シニア モバイルアプリ エンジニア",
         "masthead.cta": "詳しく見る",
 
         // About
         "about.greeting": "はじめまして！",
-        "about.bio": `日本在住のシニアiOSデベロッパーです。Swiftを用いたユーザー向けiOSアプリの開発において、7年以上の実務経験を持っています。特に大規模なユーザー基盤を持つアプリにおいて、細部へのこだわりと信頼性を重視した開発を専門としています。アジャイルスクラム手法を強く支持しており、反復的な開発と継続的な改善を信念としています。iOS開発以外にも、UI/UXデザインの原則、データベースアーキテクチャ、バックエンド開発にも関心を持ち、プロジェクトの円滑な進行のためにこれらのシステムの仕組みを積極的に学んでいます。`,
+        "about.bio": `日本在住のシニアモバイルアプリエンジニアです。Swiftを用いたユーザー向けiOSアプリの開発において、7年以上の実務経験を持っています。今年からは、AI支援ワークフローによって大きく加速されたことで、Android開発にも領域を広げました。現在は自身のGoogle Play Storeデベロッパーアカウントを持ち、Chatzone、Earnings、Savingsの3つのAndroidアプリをアップロードしています（いずれも現在開発中）。アプリ署名、リリーストラック、ストア掲載情報、Play Consoleの審査など、Google Play Storeへのアプリ公開に必要なことを一から学ぶのは、とても楽しい経験でした。特に大規模なユーザー基盤を持つアプリにおいて、細部へのこだわりと信頼性を重視した開発を専門としています。アジャイルスクラム手法を強く支持しており、反復的な開発と継続的な改善を信念としています。モバイル開発以外にも、UI/UXデザインの原則、データベースアーキテクチャ、バックエンド開発にも関心を持ち、プロジェクトの円滑な進行のためにこれらのシステムの仕組みを積極的に学んでいます。`,
         "about.github": `業務ではGitHubをバージョン管理と共同開発に活用しています。上記のGitHubコントリビューションのスナップショットは、コードレビュー、機能開発、チーム開発への継続的な取り組みを反映しています。`,
-        "about.interests": `健康とフィットネスに強い関心を持っており、心身の健康が個人的にも仕事においても重要な基盤であると考えています。テクノロジー以外にも、天文学や海洋生物学など多様な分野に好奇心を持っています。iPhoneとiPadの両方に最適化された複数のiOSアプリを<a href="https://apps.apple.com/us/developer/cyan-villarin/id1407677137">App Store</a>で公開しています。`,
+        "about.interests": `健康とフィットネスに強い関心を持っており、心身の健康が個人的にも仕事においても重要な基盤であると考えています。テクノロジー以外にも、天文学や海洋生物学など多様な分野に好奇心を持っています。iPhoneとiPadの両方に最適化された複数のiOSアプリを<a href="https://apps.apple.com/us/developer/cyan-villarin/id1407677137">App Store</a>で公開しているほか、自身のデベロッパーアカウントでAndroidアプリもGoogle Play Storeに公開しています。`,
 
         // My Workflow
         "workflow.title": "ワークフロー",
@@ -102,6 +104,8 @@ const translations = {
         "workflow.worktrees.list": `<li><strong>/show-worktrees</strong> — すべてのアクティブなworktreeのブランチ、ステータス、関連チケットを一覧表示します</li>
                     <li><strong>/cleanup-worktrees</strong> — 完了したworktreeのHEADをデタッチしてリセットし、ブランチ名を解放して、worktreeを削除・再作成せずに新しいブランチをチェックアウトできるようにします</li>`,
         "workflow.worktrees.bazel": `プロジェクトは<strong>Bazel</strong>をビルドシステムとして使用しており、すべてのworktreeはメインリポジトリのBazelキャッシュを共有するよう設定されています。10個のworktreeがストレージの10倍を意味するわけではなく、インクリメンタルビルドのアーティファクトがすべてで再利用され、完全な並列ビルドを維持しながらディスク使用量を抑えています。`,
+        "workflow.android.title": "AIでAndroidへ領域拡大",
+        "workflow.android.body": `AIは私のiOS開発を速くしただけでなく、作れるものの幅を広げてくれました。今年からAndroid開発を始め、AI支援ワークフローがKotlinとJetpack Composeの学習曲線を平坦にしてくれたおかげで、独学では遥かに時間がかかったはずのペースで進めることができました。自身の<strong>Google Play Storeデベロッパーアカウント</strong>を作成し、<strong>Chatzone</strong>、<strong>Earnings</strong>、<strong>Savings</strong>の3つのAndroidアプリをアップロード。その過程で、アプリ署名、リリーストラック、ストア掲載情報、コンテンツレーティング、Play Consoleの審査など、公開パイプライン全体を学びました。とても楽しい経験であり、今では同じプロダクトをiOSとAndroidの両方で提供できるようになりました。`,
         "workflow.connected.title": "すべてが繋がる",
         "workflow.connected.body": `Vaultは人間の知識とAIの動作の両方にとっての唯一の情報源です。Claude Codeがコンテキスト（アーキテクチャパターン、プロジェクトの規約、過去の決定）を必要とするとき、まずVaultを読みます。新しい学びはVaultにフィードバックされ、将来のすべてのセッションで利用可能になります。これにより、AIが毎回ゼロから始めるのではなく、実際のプロジェクト履歴に基づいて時間とともにより効果的になるフィードバックループが生まれます。`,
 

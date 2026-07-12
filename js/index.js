@@ -311,8 +311,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     id: 'myApp1-android',
                     name: 'Android',
                     name_ja: 'Android版',
-                    description: `The Android version of Chatzone, currently in active development, bringing the same privacy-focused ephemeral messaging experience to Android devices. Built with Kotlin and Jetpack Compose (Material 3) using MVVM architecture with Navigation Compose, it connects to the same Firebase Realtime Database backend as the iOS app, so iOS and Android users can create and join the same private rooms via room codes or QR code scanning (QR generation via ZXing). Implements the identical cross-platform security model as the iOS version — X25519 Diffie-Hellman key exchange with HKDF-SHA256 key derivation (RFC 5869), implemented to be byte-compatible with iOS CryptoKit's AES-GCM combined format (nonce + ciphertext + tag) — so messages stay encrypted end-to-end across platforms without transmitting secrets over the network, and are automatically deleted after the session ends. Uses Firebase anonymous authentication and Remote Config, with Lottie animations and Coil image loading. Development follows the same Obsidian + Claude Code workflow used on the iOS app, with all tasks, plans, and learnings tracked in an Obsidian vault that Claude Code reads directly as a local knowledge base for AI-assisted feature implementation and iterative development.`,
-                    description_ja: `現在開発中のChatzone Android版。プライバシー重視のエフェメラルメッセージング体験をAndroidデバイスにも提供する。KotlinとJetpack Compose（Material 3）を使用しMVVMアーキテクチャとNavigation Composeで構築され、iOSアプリと同じFirebase Realtime Databaseバックエンドに接続するため、iOSとAndroidのユーザーがルームコードやQRコードスキャン（ZXingによるQR生成）で同じプライベートルームを作成・参加できる。iOS版と同一のクロスプラットフォームセキュリティモデル — X25519 Diffie-Hellman鍵交換とHKDF-SHA256鍵導出（RFC 5869）を、iOS CryptoKitのAES-GCM combined形式（nonce + 暗号文 + タグ）とバイト互換になるよう実装 — により、ネットワーク上で秘密鍵を送信せずにメッセージはプラットフォームを越えてエンドツーエンドで暗号化され、セッション終了後に自動的に削除される。Firebase匿名認証とRemote Configを使用し、LottieアニメーションとCoil画像読み込みにも対応。開発はiOSアプリと同じObsidian + Claude Codeワークフローで推進し、すべてのタスク、計画、学びをObsidian Vaultで管理。Claude Codeがローカルのナレッジベースとして直接読み込むことで、AI支援による機能実装と反復開発を実現している。`,
+                    description: `The Android version of Chatzone, currently in active development, bringing the same privacy-focused ephemeral messaging experience to Android devices. Built with Kotlin and Jetpack Compose (Material 3) using MVVM architecture with Navigation Compose, it connects to the same Firebase Realtime Database backend as the iOS app, so iOS and Android users can create and join the same private rooms via room codes or QR code scanning (QR generation via ZXing). Implements the identical cross-platform security model as the iOS version — X25519 Diffie-Hellman key exchange with HKDF-SHA256 key derivation (RFC 5869), implemented to be byte-compatible with iOS CryptoKit's AES-GCM combined format (nonce + ciphertext + tag) — so messages stay encrypted end-to-end across platforms without transmitting secrets over the network, and are automatically deleted after the session ends. Uses Firebase anonymous authentication and Remote Config, with Lottie animations and Coil image loading. Uploaded to the Google Play Store under my own developer account, going through the full publishing pipeline — app signing, release tracks, store listing, and Play Console review. Development follows the same Obsidian + Claude Code workflow used on the iOS app, with all tasks, plans, and learnings tracked in an Obsidian vault that Claude Code reads directly as a local knowledge base for AI-assisted feature implementation and iterative development.`,
+                    description_ja: `現在開発中のChatzone Android版。プライバシー重視のエフェメラルメッセージング体験をAndroidデバイスにも提供する。KotlinとJetpack Compose（Material 3）を使用しMVVMアーキテクチャとNavigation Composeで構築され、iOSアプリと同じFirebase Realtime Databaseバックエンドに接続するため、iOSとAndroidのユーザーがルームコードやQRコードスキャン（ZXingによるQR生成）で同じプライベートルームを作成・参加できる。iOS版と同一のクロスプラットフォームセキュリティモデル — X25519 Diffie-Hellman鍵交換とHKDF-SHA256鍵導出（RFC 5869）を、iOS CryptoKitのAES-GCM combined形式（nonce + 暗号文 + タグ）とバイト互換になるよう実装 — により、ネットワーク上で秘密鍵を送信せずにメッセージはプラットフォームを越えてエンドツーエンドで暗号化され、セッション終了後に自動的に削除される。Firebase匿名認証とRemote Configを使用し、LottieアニメーションとCoil画像読み込みにも対応。自身のデベロッパーアカウントでGoogle Play Storeにアップロードし、アプリ署名、リリーストラック、ストア掲載情報、Play Consoleの審査まで、公開パイプライン全体を経験。開発はiOSアプリと同じObsidian + Claude Codeワークフローで推進し、すべてのタスク、計画、学びをObsidian Vaultで管理。Claude Codeがローカルのナレッジベースとして直接読み込むことで、AI支援による機能実装と反復開発を実現している。`,
                     technologies: [
                         "Kotlin",
                         "Jetpack Compose (Material 3)",
@@ -332,10 +332,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         "Android Studio"
                     ],
                     carouselId: 'myAppsCarouselInner1Android',
-                    placeholderCount: 3,
                     images: [
-                        // Placeholder — Android screenshots coming soon.
-                        // Add paths like "assets/own-apps/1-chatzone/android/chatzone-android-0.png" here.
+                        "assets/own-apps/1-chatzone/android/chatzone-android-0.png",
+                        "assets/own-apps/1-chatzone/android/chatzone-android-1.png",
+                        "assets/own-apps/1-chatzone/android/chatzone-android-2.png",
+                        "assets/own-apps/1-chatzone/android/chatzone-android-3.png",
+                        "assets/own-apps/1-chatzone/android/chatzone-android-4.png",
+                        "assets/own-apps/1-chatzone/android/chatzone-android-5.png"
                     ]
                 }
             ]
@@ -394,54 +397,114 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
             id: 'myApp5',
-            title: 'Savings - Track Your Money',
-            title_ja: 'Savings - 資産を記録',
+            title: 'Savings - Track Your Money (iOS & Android)',
+            title_ja: 'Savings - 資産を記録（iOS・Android）',
             link: 'https://apps.apple.com/us/app/savings-track-your-money/id6760301607',
-            description: `A personal asset tracking iOS app for recording snapshots of total assets over time and visualizing financial progress. Features interactive charts across multiple time periods (1W, 1M, 3M, 6M, 1Y, All), home screen widgets showing latest balance and savings chart, support for 16 currencies, and privacy-first design with all data stored on-device via SwiftData. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
-            description_ja: `総資産のスナップショットを時系列で記録し、財務の進捗を可視化する個人資産管理iOSアプリ。複数の期間（1W、1M、3M、6M、1Y、All）にわたるインタラクティブチャート、最新残高と貯蓄チャートを表示するホーム画面ウィジェット、16通貨のサポート、SwiftDataによるオンデバイスデータ保存のプライバシーファーストな設計が特徴。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、メタデータ、キーワード、プロモーションコピーを含むApp Store申請を準備した。`,
-            technologies: [
-                "SwiftUI",
-                "SwiftData",
-                "Swift Charts",
-                "WidgetKit",
-                "Xcode Cloud",
-                "Google AdMob",
-                "Xcode Build System"
-            ],
-            carouselId: 'myAppsCarouselInner5',
-            images: [
-                "assets/own-apps/5-savings/savings-0.png",
-                "assets/own-apps/5-savings/savings-1.png",
-                "assets/own-apps/5-savings/savings-2.png",
-                "assets/own-apps/5-savings/savings-3.png",
-                "assets/own-apps/5-savings/savings-4.png",
-                "assets/own-apps/5-savings/savings-5.png"
+            platforms: [
+                {
+                    id: 'myApp5-ios',
+                    name: 'iOS',
+                    name_ja: 'iOS版',
+                    description: `A personal asset tracking iOS app for recording snapshots of total assets over time and visualizing financial progress. Features interactive charts across multiple time periods (1W, 1M, 3M, 6M, 1Y, All), home screen widgets showing latest balance and savings chart, support for 16 currencies, and privacy-first design with all data stored on-device via SwiftData. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
+                    description_ja: `総資産のスナップショットを時系列で記録し、財務の進捗を可視化する個人資産管理iOSアプリ。複数の期間（1W、1M、3M、6M、1Y、All）にわたるインタラクティブチャート、最新残高と貯蓄チャートを表示するホーム画面ウィジェット、16通貨のサポート、SwiftDataによるオンデバイスデータ保存のプライバシーファーストな設計が特徴。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、メタデータ、キーワード、プロモーションコピーを含むApp Store申請を準備した。`,
+                    technologies: [
+                        "SwiftUI",
+                        "SwiftData",
+                        "Swift Charts",
+                        "WidgetKit",
+                        "Xcode Cloud",
+                        "Google AdMob",
+                        "Xcode Build System"
+                    ],
+                    carouselId: 'myAppsCarouselInner5',
+                    images: [
+                        "assets/own-apps/5-savings/savings-0.png",
+                        "assets/own-apps/5-savings/savings-1.png",
+                        "assets/own-apps/5-savings/savings-2.png",
+                        "assets/own-apps/5-savings/savings-3.png",
+                        "assets/own-apps/5-savings/savings-4.png",
+                        "assets/own-apps/5-savings/savings-5.png"
+                    ]
+                },
+                {
+                    id: 'myApp5-android',
+                    name: 'Android',
+                    name_ja: 'Android版',
+                    description: `The Android version of Savings, currently in active development, bringing the same personal asset tracking experience to Android devices. Built with Kotlin and Jetpack Compose (Material 3) using MVVM architecture, it recreates the interactive savings charts, multi-currency support, and privacy-first on-device data storage of the iOS app. Uploaded to the Google Play Store under my own developer account, going through the full publishing pipeline — app signing, release tracks, store listing, and Play Console review.`,
+                    description_ja: `現在開発中のSavings Android版。個人資産管理の体験をAndroidデバイスにも提供する。KotlinとJetpack Compose（Material 3）を使用しMVVMアーキテクチャで構築され、iOSアプリのインタラクティブな貯蓄チャート、マルチ通貨サポート、プライバシーファーストなオンデバイスデータ保存を再現。自身のデベロッパーアカウントでGoogle Play Storeにアップロードし、アプリ署名、リリーストラック、ストア掲載情報、Play Consoleの審査まで、公開パイプライン全体を経験した。`,
+                    technologies: [
+                        "Kotlin",
+                        "Jetpack Compose (Material 3)",
+                        "MVVM",
+                        "Room Database",
+                        "Google AdMob",
+                        "Gradle (Kotlin DSL)",
+                        "Android Studio",
+                        "Google Play Console"
+                    ],
+                    carouselId: 'myAppsCarouselInner5Android',
+                    placeholderCount: 3,
+                    images: [
+                        // Placeholder — Android screenshots coming soon.
+                        // Add paths like "assets/own-apps/5-savings/android/savings-android-0.png" here.
+                    ]
+                }
             ]
         },
         {
             id: 'myApp6',
-            title: 'Earnings – Track Your Pay',
-            title_ja: 'Earnings – 給料を追跡',
+            title: 'Earnings – Track Your Pay (iOS & Android)',
+            title_ja: 'Earnings – 給料を追跡（iOS・Android）',
             link: 'https://apps.apple.com/us/app/earnings-realtime-tracking/id6760335853',
-            description: `A real-time earnings tracker iOS app that shows exactly how much money users have earned since starting their job, updating live to the second. Set income, working days, and hours once, and the app calculates precise workday-based earnings. Features home screen widgets, a live per-second rate animation, and progress views for the current hour, day, week, month, or year. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
-            description_ja: `仕事開始からの稼ぎを秒単位でリアルタイム表示する収入トラッカーiOSアプリ。収入、勤務日、勤務時間を一度設定するだけで、営業日ベースの正確な収入を計算する。ホーム画面ウィジェット、秒単位のライブレートアニメーション、現在の時間・日・週・月・年の進捗ビューが特徴。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、App Store申請を準備した。`,
-            technologies: [
-                "SwiftUI",
-                "SwiftData",
-                "WidgetKit",
-                "Xcode Cloud",
-                "Google AdMob",
-                "Xcode Build System"
-            ],
-            carouselId: 'myAppsCarouselInner6',
-            images: [
-                "assets/own-apps/6-earnings/earnings-0.png",
-                "assets/own-apps/6-earnings/earnings-1.png",
-                "assets/own-apps/6-earnings/earnings-2.png",
-                "assets/own-apps/6-earnings/earnings-3.png",
-                "assets/own-apps/6-earnings/earnings-4.png",
-                "assets/own-apps/6-earnings/earnings-5.png",
-                "assets/own-apps/6-earnings/earnings-6.png"
+            platforms: [
+                {
+                    id: 'myApp6-ios',
+                    name: 'iOS',
+                    name_ja: 'iOS版',
+                    description: `A real-time earnings tracker iOS app that shows exactly how much money users have earned since starting their job, updating live to the second. Set income, working days, and hours once, and the app calculates precise workday-based earnings. Features home screen widgets, a live per-second rate animation, and progress views for the current hour, day, week, month, or year. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
+                    description_ja: `仕事開始からの稼ぎを秒単位でリアルタイム表示する収入トラッカーiOSアプリ。収入、勤務日、勤務時間を一度設定するだけで、営業日ベースの正確な収入を計算する。ホーム画面ウィジェット、秒単位のライブレートアニメーション、現在の時間・日・週・月・年の進捗ビューが特徴。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、App Store申請を準備した。`,
+                    technologies: [
+                        "SwiftUI",
+                        "SwiftData",
+                        "WidgetKit",
+                        "Xcode Cloud",
+                        "Google AdMob",
+                        "Xcode Build System"
+                    ],
+                    carouselId: 'myAppsCarouselInner6',
+                    images: [
+                        "assets/own-apps/6-earnings/earnings-0.png",
+                        "assets/own-apps/6-earnings/earnings-1.png",
+                        "assets/own-apps/6-earnings/earnings-2.png",
+                        "assets/own-apps/6-earnings/earnings-3.png",
+                        "assets/own-apps/6-earnings/earnings-4.png",
+                        "assets/own-apps/6-earnings/earnings-5.png",
+                        "assets/own-apps/6-earnings/earnings-6.png"
+                    ]
+                },
+                {
+                    id: 'myApp6-android',
+                    name: 'Android',
+                    name_ja: 'Android版',
+                    description: `The Android version of Earnings, currently in active development, bringing the same real-time earnings tracking experience to Android devices. Built with Kotlin and Jetpack Compose (Material 3) using MVVM architecture, it recreates the live per-second earnings counter, workday-based calculations, and progress views of the iOS app. Uploaded to the Google Play Store under my own developer account, going through the full publishing pipeline — app signing, release tracks, store listing, and Play Console review.`,
+                    description_ja: `現在開発中のEarnings Android版。リアルタイム収入トラッキングの体験をAndroidデバイスにも提供する。KotlinとJetpack Compose（Material 3）を使用しMVVMアーキテクチャで構築され、iOSアプリの秒単位ライブ収入カウンター、営業日ベースの計算、進捗ビューを再現。自身のデベロッパーアカウントでGoogle Play Storeにアップロードし、アプリ署名、リリーストラック、ストア掲載情報、Play Consoleの審査まで、公開パイプライン全体を経験した。`,
+                    technologies: [
+                        "Kotlin",
+                        "Jetpack Compose (Material 3)",
+                        "MVVM",
+                        "DataStore",
+                        "Google AdMob",
+                        "Gradle (Kotlin DSL)",
+                        "Android Studio",
+                        "Google Play Console"
+                    ],
+                    carouselId: 'myAppsCarouselInner6Android',
+                    placeholderCount: 3,
+                    images: [
+                        // Placeholder — Android screenshots coming soon.
+                        // Add paths like "assets/own-apps/6-earnings/android/earnings-android-0.png" here.
+                    ]
+                }
             ]
         },
         {
