@@ -491,23 +491,27 @@ document.addEventListener("DOMContentLoaded", function() {
                     id: 'myApp6-android',
                     name: 'Android',
                     name_ja: 'Android版',
-                    description: `The Android version of Earnings, currently in active development, bringing the same real-time earnings tracking experience to Android devices. Built with Kotlin and Jetpack Compose (Material 3) using MVVM architecture, it recreates the live per-second earnings counter, workday-based calculations, and progress views of the iOS app. Uploaded to the Google Play Store under my own developer account, going through the full publishing pipeline — app signing, release tracks, store listing, and Play Console review.`,
-                    description_ja: `現在開発中のEarnings Android版。リアルタイム収入トラッキングの体験をAndroidデバイスにも提供する。KotlinとJetpack Compose（Material 3）を使用しMVVMアーキテクチャで構築され、iOSアプリの秒単位ライブ収入カウンター、営業日ベースの計算、進捗ビューを再現。自身のデベロッパーアカウントでGoogle Play Storeにアップロードし、アプリ署名、リリーストラック、ストア掲載情報、Play Consoleの審査まで、公開パイプライン全体を経験した。`,
+                    description: `The Android version of Earnings, a pixel-faithful port of the iOS app built with Kotlin and Jetpack Compose (Material 3). It recreates the live per-second earnings counter, workday-based rate calculations, and progress views for the current hour, day, week, month, or year. The iOS WidgetKit extension was ported to Jetpack Glance as three home screen widgets — total earned, period progress (configurable per widget instance), and earning rate — kept in sync with the app. Firebase Analytics events mirror the iOS implementation exactly, so both platforms report into the same streams. Prepared for Google Play submission with a fastlane pipeline that uploads the full store listing and release builds.`,
+                    description_ja: `iOSアプリを忠実に移植したEarnings Android版。KotlinとJetpack Compose（Material 3）で構築し、秒単位のライブ収入カウンター、営業日ベースのレート計算、現在の時間・日・週・月・年の進捗ビューを再現。iOSのWidgetKit拡張をJetpack Glanceに移植し、累計収入・期間進捗（ウィジェットごとに設定可能）・収入レートの3つのホーム画面ウィジェットとしてアプリと同期させた。Firebase Analyticsのイベントは iOS版と完全に一致させ、両プラットフォームで同じ計測を実現。fastlaneでストア掲載情報とリリースビルドをアップロードするパイプラインを構築し、Google Play申請を準備した。`,
                     technologies: [
                         "Kotlin",
                         "Jetpack Compose (Material 3)",
-                        "MVVM",
-                        "DataStore",
+                        "Jetpack Glance (Widgets)",
+                        "Firebase Analytics",
                         "Google AdMob",
+                        "fastlane",
                         "Gradle (Kotlin DSL)",
-                        "Android Studio",
                         "Google Play Console"
                     ],
                     carouselId: 'myAppsCarouselInner6Android',
-                    placeholderCount: 3,
                     images: [
-                        // Placeholder — Android screenshots coming soon.
-                        // Add paths like "assets/own-apps/6-earnings/android/earnings-android-0.png" here.
+                        "assets/own-apps/6-earnings/android/earnings-android-0.png",
+                        "assets/own-apps/6-earnings/android/earnings-android-1.png",
+                        "assets/own-apps/6-earnings/android/earnings-android-2.png",
+                        "assets/own-apps/6-earnings/android/earnings-android-3.png",
+                        "assets/own-apps/6-earnings/android/earnings-android-4.png",
+                        "assets/own-apps/6-earnings/android/earnings-android-5.png",
+                        "assets/own-apps/6-earnings/android/earnings-android-6.png"
                     ]
                 }
             ]
