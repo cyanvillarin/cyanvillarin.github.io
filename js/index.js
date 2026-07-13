@@ -430,23 +430,28 @@ document.addEventListener("DOMContentLoaded", function() {
                     id: 'myApp5-android',
                     name: 'Android',
                     name_ja: 'Android版',
-                    description: `The Android version of Savings, currently in active development, bringing the same personal asset tracking experience to Android devices. Built with Kotlin and Jetpack Compose (Material 3) using MVVM architecture, it recreates the interactive savings charts, multi-currency support, and privacy-first on-device data storage of the iOS app. Uploaded to the Google Play Store under my own developer account, going through the full publishing pipeline — app signing, release tracks, store listing, and Play Console review.`,
-                    description_ja: `現在開発中のSavings Android版。個人資産管理の体験をAndroidデバイスにも提供する。KotlinとJetpack Compose（Material 3）を使用しMVVMアーキテクチャで構築され、iOSアプリのインタラクティブな貯蓄チャート、マルチ通貨サポート、プライバシーファーストなオンデバイスデータ保存を再現。自身のデベロッパーアカウントでGoogle Play Storeにアップロードし、アプリ署名、リリーストラック、ストア掲載情報、Play Consoleの審査まで、公開パイプライン全体を経験した。`,
+                    description: `The Android version of Savings, currently in active development, bringing the same personal asset tracking experience to Android devices. Built with Kotlin and Jetpack Compose (Material 3) using MVVM architecture, it recreates the iOS app feature for feature — interactive savings charts across six time periods with drag-to-inspect selection (drawn on a custom Compose Canvas, since Android has no Swift Charts equivalent), savings goal progress, quick add/subtract adjustments, 29 currencies, and privacy-first on-device storage via Room. Home screen widgets are rebuilt with Jetpack Glance, rendering the chart to a Bitmap and refreshing on every data change, mirroring the iOS WidgetKit widgets. Uploaded to the Google Play Store under my own developer account, going through the full publishing pipeline — app signing, release tracks, store listing, and Play Console review.`,
+                    description_ja: `現在開発中のSavings Android版。個人資産管理の体験をAndroidデバイスにも提供する。KotlinとJetpack Compose（Material 3）を使用しMVVMアーキテクチャで構築され、iOSアプリの機能を余すことなく再現 — 6つの期間にわたるインタラクティブな貯蓄チャート（ドラッグで各エントリを確認可能。AndroidにはSwift Chartsに相当するものがないため、Compose Canvasで独自に描画）、貯蓄目標の進捗、加算・減算によるクイック調整、29通貨のサポート、Roomによるプライバシーファーストなオンデバイス保存。ホーム画面ウィジェットはJetpack Glanceで再構築し、チャートをBitmapに描画してデータ変更のたびに更新することで、iOSのWidgetKitウィジェットと同等の体験を実現した。自身のデベロッパーアカウントでGoogle Play Storeにアップロードし、アプリ署名、リリーストラック、ストア掲載情報、Play Consoleの審査まで、公開パイプライン全体を経験した。`,
                     technologies: [
                         "Kotlin",
                         "Jetpack Compose (Material 3)",
+                        "Jetpack Glance (Widgets)",
                         "MVVM",
                         "Room Database",
+                        "Firebase Analytics",
                         "Google AdMob",
                         "Gradle (Kotlin DSL)",
                         "Android Studio",
                         "Google Play Console"
                     ],
                     carouselId: 'myAppsCarouselInner5Android',
-                    placeholderCount: 3,
                     images: [
-                        // Placeholder — Android screenshots coming soon.
-                        // Add paths like "assets/own-apps/5-savings/android/savings-android-0.png" here.
+                        "assets/own-apps/5-savings/android/savings-android-0.png",
+                        "assets/own-apps/5-savings/android/savings-android-1.png",
+                        "assets/own-apps/5-savings/android/savings-android-2.png",
+                        "assets/own-apps/5-savings/android/savings-android-3.png",
+                        "assets/own-apps/5-savings/android/savings-android-4.png",
+                        "assets/own-apps/5-savings/android/savings-android-5.png"
                     ]
                 }
             ]
