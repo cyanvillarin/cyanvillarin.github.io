@@ -272,12 +272,12 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'myApp1',
             title: 'Chatzone App (iOS & Android)',
             title_ja: 'Chatzone アプリ（iOS・Android）',
-            link: 'https://apps.apple.com/us/app/chatzone-private-rooms/id1551793873',
             platforms: [
                 {
                     id: 'myApp1-ios',
                     name: 'iOS',
                     name_ja: 'iOS版',
+                    link: 'https://apps.apple.com/us/app/chatzone-private-rooms/id1551793873',
                     description: `A privacy-focused ephemeral messaging iOS app where all messages are encrypted before being sent and automatically deleted after the session ends. Users create or join private rooms via room codes or QR code scanning, and can share encrypted text messages and photos in real time. Recently replaced hardcoded AES-128 keys with Diffie-Hellman key exchange (ECDH via CryptoKit) to securely derive AES-GCM encryption keys without transmitting secrets over the network. Also implemented Firebase Realtime Database security rules to enforce room-level access control, anonymous authentication, and secret whitelist validation. Completed a full migration from UIKit Storyboards to SwiftUI across all screens (SelectionView, ConnectionView, MessagesView, AboutView, and Modals), replaced CocoaPods with Swift Package Manager for all dependencies (Firebase, Google AdMob, Lottie). Configured Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution, and handled the full App Store submission flow including metadata, screenshots, keywords, promotional copy, encryption compliance (ITSAppUsesNonExemptEncryption), and review guidelines. Monetized with Google AdMob using production-safe ad testing hygiene: debug builds load Google's sample ad units while physical test devices are registered account-wide in the AdMob console, so real ads are never clicked during development. Development was driven by an Obsidian + Claude Code workflow — all tasks, migration plans, and learnings were tracked in an Obsidian vault that Claude Code reads directly as a local knowledge base, enabling AI-assisted feature implementation, code generation, and iterative development across the entire project.`,
                     description_ja: `プライバシー重視のエフェメラルメッセージングiOSアプリ。すべてのメッセージは暗号化されてから送信され、セッション終了後に自動的に削除される。ルームコードまたはQRコードスキャンでプライベートルームを作成・参加し、暗号化されたテキストメッセージや写真をリアルタイムで共有可能。最近、ハードコードされたAES-128鍵をDiffie-Hellman鍵交換（CryptoKitによるECDH）に置き換え、ネットワーク上で秘密鍵を送信せずにAES-GCM暗号化鍵を安全に導出する仕組みを実現。また、Firebase Realtime Databaseセキュリティルールを実装し、ルームレベルのアクセス制御、匿名認証、シークレットホワイトリスト検証を強化。全画面（SelectionView、ConnectionView、MessagesView、AboutView、Modals）をUIKit StoryboardsからSwiftUIへ完全移行し、すべての依存関係（Firebase、Google AdMob、Lottie）をCocoaPodsからSwift Package Managerに置き換えた。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、メタデータ、スクリーンショット、キーワード、プロモーションコピー、暗号化コンプライアンス（ITSAppUsesNonExemptEncryption）、審査ガイドラインを含むApp Store申請フロー全体を対応。Google AdMobによる収益化では、本番環境に安全な広告テスト運用を実践：デバッグビルドはGoogleのサンプル広告ユニットを読み込み、実機はAdMobコンソールにアカウントレベルで登録することで、開発中に実際の広告をクリックしてしまうことを防止。開発はObsidian + Claude Codeワークフローで推進し、すべてのタスク、移行計画、学びをObsidian Vaultで管理。Claude Codeがローカルのナレッジベースとして直接読み込むことで、AI支援による機能実装、コード生成、プロジェクト全体の反復開発を実現した。`,
                     technologies: [
@@ -312,6 +312,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     id: 'myApp1-android',
                     name: 'Android',
                     name_ja: 'Android版',
+                    link: 'https://play.google.com/store/apps/details?id=com.inspiralists.chatzone',
                     description: `The Android version of Chatzone, currently in active development, bringing the same privacy-focused ephemeral messaging experience to Android devices. Built with Kotlin and Jetpack Compose (Material 3) using MVVM architecture with Navigation Compose, it connects to the same Firebase Realtime Database backend as the iOS app, so iOS and Android users can create and join the same private rooms via room codes or QR code scanning (QR generation via ZXing). Implements the identical cross-platform security model as the iOS version — X25519 Diffie-Hellman key exchange with HKDF-SHA256 key derivation (RFC 5869), implemented to be byte-compatible with iOS CryptoKit's AES-GCM combined format (nonce + ciphertext + tag) — so messages stay encrypted end-to-end across platforms without transmitting secrets over the network, and are automatically deleted after the session ends. Uses Firebase anonymous authentication and Remote Config, with Lottie animations and Coil image loading. Released to Google Play (internal testing track) under my own developer account through a fastlane-automated pipeline: signed AAB uploads using a self-managed upload keystore under Play App Signing, and the full store listing (descriptions, framed screenshots, feature graphic) synced from version-controlled metadata via fastlane supply. Completed the entire Play Console compliance pass — Data safety declarations verified against Google's official Mobile Ads SDK and Firebase disclosure documentation, the Advertising ID declaration, content rating, and target audience — plus AdMob monetization with an interstitial ad unit, account-level test-device registration (instead of per-app code), and app-ads.txt publisher verification. Development follows the same Obsidian + Claude Code workflow used on the iOS app, with all tasks, plans, and learnings tracked in an Obsidian vault that Claude Code reads directly as a local knowledge base — including a reusable Google Play publishing playbook distilled from this launch for the next Android apps.`,
                     description_ja: `現在開発中のChatzone Android版。プライバシー重視のエフェメラルメッセージング体験をAndroidデバイスにも提供する。KotlinとJetpack Compose（Material 3）を使用しMVVMアーキテクチャとNavigation Composeで構築され、iOSアプリと同じFirebase Realtime Databaseバックエンドに接続するため、iOSとAndroidのユーザーがルームコードやQRコードスキャン（ZXingによるQR生成）で同じプライベートルームを作成・参加できる。iOS版と同一のクロスプラットフォームセキュリティモデル — X25519 Diffie-Hellman鍵交換とHKDF-SHA256鍵導出（RFC 5869）を、iOS CryptoKitのAES-GCM combined形式（nonce + 暗号文 + タグ）とバイト互換になるよう実装 — により、ネットワーク上で秘密鍵を送信せずにメッセージはプラットフォームを越えてエンドツーエンドで暗号化され、セッション終了後に自動的に削除される。Firebase匿名認証とRemote Configを使用し、LottieアニメーションとCoil画像読み込みにも対応。自身のデベロッパーアカウントでGoogle Play（内部テストトラック)にリリースし、fastlaneで自動化されたパイプラインを構築：Play App Signing下で自己管理のアップロードキーストアによる署名済みAABアップロード、バージョン管理されたメタデータからfastlane supplyでストア掲載情報（説明文、フレーム付きスクリーンショット、フィーチャーグラフィック）を同期。Play Consoleのコンプライアンス対応も完遂 — GoogleのMobile Ads SDKとFirebaseの公式開示ドキュメントに照らして検証したデータセーフティ申告、広告ID申告、コンテンツレーティング、ターゲット層設定 — さらにAdMobによる収益化（インタースティシャル広告ユニット、アプリごとのコードではなくアカウントレベルのテストデバイス登録、app-ads.txtパブリッシャー検証）にも対応。開発はiOSアプリと同じObsidian + Claude Codeワークフローで推進し、すべてのタスク、計画、学びをObsidian Vaultで管理。Claude Codeがローカルのナレッジベースとして直接読み込むことで、AI支援による機能実装と反復開発を実現 — 今回のローンチから得た知見は、次のAndroidアプリのための再利用可能なGoogle Play公開プレイブックとしてまとめている。`,
                     technologies: [
@@ -405,12 +406,12 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'myApp5',
             title: 'Savings - Track Your Money (iOS & Android)',
             title_ja: 'Savings - 資産を記録（iOS・Android）',
-            link: 'https://apps.apple.com/us/app/savings-track-your-money/id6760301607',
             platforms: [
                 {
                     id: 'myApp5-ios',
                     name: 'iOS',
                     name_ja: 'iOS版',
+                    link: 'https://apps.apple.com/us/app/savings-track-your-money/id6760301607',
                     description: `A personal asset tracking iOS app for recording snapshots of total assets over time and visualizing financial progress. Features interactive charts across multiple time periods (1W, 1M, 3M, 6M, 1Y, All), home screen widgets showing latest balance and savings chart, support for 16 currencies, and privacy-first design with all data stored on-device via SwiftData. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
                     description_ja: `総資産のスナップショットを時系列で記録し、財務の進捗を可視化する個人資産管理iOSアプリ。複数の期間（1W、1M、3M、6M、1Y、All）にわたるインタラクティブチャート、最新残高と貯蓄チャートを表示するホーム画面ウィジェット、16通貨のサポート、SwiftDataによるオンデバイスデータ保存のプライバシーファーストな設計が特徴。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、メタデータ、キーワード、プロモーションコピーを含むApp Store申請を準備した。`,
                     technologies: [
@@ -437,6 +438,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     id: 'myApp5-android',
                     name: 'Android',
                     name_ja: 'Android版',
+                    link: 'https://play.google.com/store/apps/details?id=com.inspiralists.savings',
                     description: `The Android version of Savings, currently in active development, bringing the same personal asset tracking experience to Android devices. Built with Kotlin and Jetpack Compose (Material 3) using MVVM architecture, it recreates the iOS app feature for feature — interactive savings charts across six time periods with drag-to-inspect selection (drawn on a custom Compose Canvas, since Android has no Swift Charts equivalent), savings goal progress, quick add/subtract adjustments, 29 currencies, and privacy-first on-device storage via Room. Home screen widgets are rebuilt with Jetpack Glance, rendering the chart to a Bitmap and refreshing on every data change, mirroring the iOS WidgetKit widgets. Uploaded to the Google Play Store under my own developer account, going through the full publishing pipeline — app signing, release tracks, store listing, and Play Console review.`,
                     description_ja: `現在開発中のSavings Android版。個人資産管理の体験をAndroidデバイスにも提供する。KotlinとJetpack Compose（Material 3）を使用しMVVMアーキテクチャで構築され、iOSアプリの機能を余すことなく再現 — 6つの期間にわたるインタラクティブな貯蓄チャート（ドラッグで各エントリを確認可能。AndroidにはSwift Chartsに相当するものがないため、Compose Canvasで独自に描画）、貯蓄目標の進捗、加算・減算によるクイック調整、29通貨のサポート、Roomによるプライバシーファーストなオンデバイス保存。ホーム画面ウィジェットはJetpack Glanceで再構築し、チャートをBitmapに描画してデータ変更のたびに更新することで、iOSのWidgetKitウィジェットと同等の体験を実現した。自身のデベロッパーアカウントでGoogle Play Storeにアップロードし、アプリ署名、リリーストラック、ストア掲載情報、Play Consoleの審査まで、公開パイプライン全体を経験した。`,
                     technologies: [
@@ -468,12 +470,12 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 'myApp6',
             title: 'Earnings – Track Your Pay (iOS & Android)',
             title_ja: 'Earnings – 給料を追跡（iOS・Android）',
-            link: 'https://apps.apple.com/us/app/earnings-realtime-tracking/id6760335853',
             platforms: [
                 {
                     id: 'myApp6-ios',
                     name: 'iOS',
                     name_ja: 'iOS版',
+                    link: 'https://apps.apple.com/us/app/earnings-realtime-tracking/id6760335853',
                     description: `A real-time earnings tracker iOS app that shows exactly how much money users have earned since starting their job, updating live to the second. Set income, working days, and hours once, and the app calculates precise workday-based earnings. Features home screen widgets, a live per-second rate animation, and progress views for the current hour, day, week, month, or year. Configured with Xcode Cloud CI/CD for automated builds, testing, and TestFlight distribution. Prepared for App Store submission with full metadata, keywords, and promotional copy.`,
                     description_ja: `仕事開始からの稼ぎを秒単位でリアルタイム表示する収入トラッカーiOSアプリ。収入、勤務日、勤務時間を一度設定するだけで、営業日ベースの正確な収入を計算する。ホーム画面ウィジェット、秒単位のライブレートアニメーション、現在の時間・日・週・月・年の進捗ビューが特徴。Xcode Cloud CI/CDによる自動ビルド、テスト、TestFlight配信を構成し、App Store申請を準備した。`,
                     technologies: [
@@ -500,6 +502,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     id: 'myApp6-android',
                     name: 'Android',
                     name_ja: 'Android版',
+                    link: 'https://play.google.com/store/apps/details?id=com.inspiralists.earnings',
                     description: `The Android version of Earnings, a pixel-faithful port of the iOS app built with Kotlin and Jetpack Compose (Material 3). It recreates the live per-second earnings counter, workday-based rate calculations, and progress views for the current hour, day, week, month, or year. The iOS WidgetKit extension was ported to Jetpack Glance as three home screen widgets — total earned, period progress (configurable per widget instance), and earning rate — kept in sync with the app. Firebase Analytics events mirror the iOS implementation exactly, so both platforms report into the same streams. Prepared for Google Play submission with a fastlane pipeline that uploads the full store listing and release builds.`,
                     description_ja: `iOSアプリを忠実に移植したEarnings Android版。KotlinとJetpack Compose（Material 3）で構築し、秒単位のライブ収入カウンター、営業日ベースのレート計算、現在の時間・日・週・月・年の進捗ビューを再現。iOSのWidgetKit拡張をJetpack Glanceに移植し、累計収入・期間進捗（ウィジェットごとに設定可能）・収入レートの3つのホーム画面ウィジェットとしてアプリと同期させた。Firebase Analyticsのイベントは iOS版と完全に一致させ、両プラットフォームで同じ計測を実現。fastlaneでストア掲載情報とリリースビルドをアップロードするパイプラインを構築し、Google Play申請を準備した。`,
                     technologies: [
@@ -775,17 +778,18 @@ document.addEventListener("DOMContentLoaded", function() {
         // Projects with platform subsections (e.g. iOS / Android)
         if (project.platforms) {
             projectTitle.innerHTML = `
-                <h4><a href="${project.link}">${title}</a></h4>
+                <h4>${title}</h4>
             `;
 
             project.platforms.forEach(platform => {
                 const platformContainer = document.getElementById(platform.id);
                 const platformName = (lang === 'ja' && platform.name_ja) ? platform.name_ja : platform.name;
+                const platformHeading = platform.link ? `<a href="${platform.link}">${platformName}</a>` : platformName;
                 const platformDescription = (lang === 'ja' && platform.description_ja) ? platform.description_ja : platform.description;
                 const platformTechnologies = platform.technologies.join(', ');
 
                 platformContainer.querySelector('.featured-text').innerHTML = `
-                    <h5 style="margin-top: 0.9375rem;">${platformName}</h5>
+                    <h5 style="margin-top: 0.9375rem;">${platformHeading}</h5>
                     <p class="text-black-50 mb-0" style="margin-top: 0.625rem;">
                         <em>${platformTechnologies}</em>
                     </p>
