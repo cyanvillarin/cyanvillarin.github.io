@@ -115,6 +115,7 @@
                     <li><strong>/commit-then-deploy</strong> — commits all changes and deploys to Firebase Hosting in a single command</li>
                     <li><strong>/whats-our-todos</strong> — surfaces all pending tasks across every project's todo file in the vault</li>
                     <li><strong>/add-knowledge</strong> — saves a new learning or pattern directly into the vault so it's available in future sessions</li>
+                    <li><strong>/orchestrate-build-uploads-ios-android</strong> — ships every app on both platforms in one run: builds signed Android AABs and uploads them to Google Play internal testing via fastlane, then version-bumps, tags, and pushes each iOS app so Xcode Cloud delivers it to TestFlight</li>
                 </ul>
 
                 <br>
@@ -134,6 +135,12 @@
                 <h4 data-i18n="workflow.android.title">Expanding into Android with AI</h4>
                 <p class="text-black-50" data-i18n="workflow.android.body">
                     AI hasn't just made me faster at iOS — it has expanded what I can build. This year I started Android development, and with AI-assisted workflows flattening the Kotlin and Jetpack Compose learning curve, I was able to move at a pace that would have taken far longer on my own. I created my own <strong>Google Play Store developer account</strong> and uploaded three Android apps — <strong>Chatzone</strong>, <strong>Earnings</strong>, and <strong>Savings</strong> — learning the full publishing pipeline along the way: app signing, release tracks, store listings, content ratings, and Play Console review. It was a genuinely fun experience, and it means I can now deliver the same product on both iOS and Android.
+                </p>
+
+                <br>
+                <h4 data-i18n="workflow.release.title">One-Command Release Trains</h4>
+                <p class="text-black-50" data-i18n="workflow.release.body">
+                    On release days, a single custom command — <strong>/orchestrate-build-uploads-ios-android</strong> — ships every app on both platforms in one run. In one session it released <strong>six builds</strong>: three Android apps built as signed AABs and uploaded to the Google Play <strong>internal testing</strong> track, and three iOS apps version-bumped, tagged, and handed to <strong>Xcode Cloud</strong> for TestFlight delivery. The two pipelines could not be more different, and the command encodes both: Android releases go through <strong>fastlane supply</strong>, authenticated with a <strong>Google Play service account</strong> (a JSON key with account-level access to the Play Android Developer API), which makes uploading builds, store listings, screenshots, and changelogs fully scriptable; iOS releases are triggered purely by pushing a release tag, with Xcode Cloud building in the cloud and injecting production signing keys through CI environment variables — no local archive ever needed. Hard-won details are captured in a vault playbook the command reads before acting: Play's strict first-upload ordering (the first AAB must land on a track before any store listing can attach to it), upload-keystore management with Play App Signing, the new-app review submission flow, and the realization that internal testing is effectively <strong>Android's TestFlight</strong> — builds visible only to opted-in testers, installed through the real store. Every release train benefits from the lessons of the previous one.
                 </p>
 
                 <br>
