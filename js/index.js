@@ -353,58 +353,6 @@ document.addEventListener("DOMContentLoaded", function() {
             ]
         },
         {
-            id: 'myApp2',
-            title: 'UAAP Sports iOS App',
-            title_ja: 'UAAP Sports iOSアプリ',
-            link: 'https://apps.apple.com/us/app/uaap-sports/id1407677138',
-            description: `A sports information iOS app providing real-time UAAP team standings, roster information, and player statistics with popularity rankings. Full-stack personal project encompassing both iOS client development and backend API implementation.`,
-            description_ja: `UAAPのチーム順位、ロスター情報、人気ランキング付き選手統計をリアルタイムで提供するスポーツ情報iOSアプリ。iOSクライアント開発とバックエンドAPI実装の両方を含むフルスタック個人プロジェクト。`,
-            technologies: [
-                "UIKit",
-                "Alamofire",
-                "RealmSwift",
-                "Firebase Analytics",
-                "Firebase Realtime Database",
-                "Firebase RemoteConfigs",
-                "CocoaPods",
-                "Xcode Build System"
-            ],
-            carouselId: 'myAppsCarouselInner2',
-            images: [
-                "assets/own-apps/2-uaap-sports/uaap-sports-0.png",
-                "assets/own-apps/2-uaap-sports/uaap-sports-1.png",
-                "assets/own-apps/2-uaap-sports/uaap-sports-2.png",
-                "assets/own-apps/2-uaap-sports/uaap-sports-3.png",
-                "assets/own-apps/2-uaap-sports/uaap-sports-4.png",
-                "assets/own-apps/2-uaap-sports/uaap-sports-5.png",
-                "assets/own-apps/2-uaap-sports/uaap-sports-6.png",
-                "assets/own-apps/2-uaap-sports/uaap-sports-7.png",
-                "assets/own-apps/2-uaap-sports/uaap-sports-8.png",
-                "assets/own-apps/2-uaap-sports/uaap-sports-9.png"
-            ]
-        },
-        {
-            id: 'myApp3',
-            title: 'Emotions iOS App',
-            title_ja: 'Emotions iOSアプリ',
-            link: 'https://apps.apple.com/us/app/emotions-quotes-and-stats/id1550042237',
-            description: `A social sentiment iOS app enabling users to explore and share emotional states within a community. Features contextual quote delivery based on selected emotions, fostering emotional awareness and connection.`,
-            description_ja: `コミュニティ内で感情状態を探索・共有できるソーシャルセンチメントiOSアプリ。選択した感情に基づくコンテキスト別の名言配信機能により、感情の気づきとつながりを育む。`,
-            technologies: [
-                "UIKit",
-                "Firebase Analytics",
-                "Firebase Realtime Database",
-                "Firebase RemoteConfigs",
-                "Xcode Build System"
-            ],
-            carouselId: 'myAppsCarouselInner3',
-            images: [
-                "assets/own-apps/3-emotions/emotions-1.png",
-                "assets/own-apps/3-emotions/emotions-2.png",
-                "assets/own-apps/3-emotions/emotions-3.png"
-            ]
-        },
-        {
             id: 'myApp5',
             title: 'Savings - Track Your Money (iOS & Android)',
             title_ja: 'Savings - 資産を記録（iOS・Android）',
