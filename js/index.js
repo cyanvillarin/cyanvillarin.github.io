@@ -536,6 +536,72 @@ document.addEventListener("DOMContentLoaded", function() {
             ]
         },
         {
+            id: 'myApp10',
+            title: 'Tally – Count Anything (iOS & Android)',
+            title_ja: 'Tally – 何でもカウント（iOS・Android）',
+            platforms: [
+                {
+                    id: 'myApp10-ios',
+                    name: 'iOS',
+                    name_ja: 'iOS版',
+                    note: 'currently in development — not yet publicly released',
+                    note_ja: '現在開発中 — 一般公開前',
+                    description: `A tally counter iOS app for keeping running counts of anything — reps and sets, laps, inventory, habits, or headcounts. Supports multiple named counters with one-tap increment and decrement, and keeps a per-counter history so any count can be reviewed. Built with SwiftUI and SwiftData with a privacy-first design that keeps all data on-device, plus home screen widgets so a count can be updated without opening the app. Configured with Xcode Cloud CI/CD for automated builds and TestFlight distribution while the app is being finished.`,
+                    description_ja: `あらゆるものの回数を記録するタリーカウンターiOSアプリ。トレーニングのレップ数やセット数、周回数、在庫、習慣、人数などを数えられる。複数の名前付きカウンターに対応し、ワンタップで加算・減算でき、カウンターごとの履歴を確認できる。SwiftUIとSwiftDataで構築し、すべてのデータをオンデバイスに保存するプライバシーファーストな設計。アプリを開かずにカウントを更新できるホーム画面ウィジェットも備える。Xcode Cloud CI/CDによる自動ビルドとTestFlight配信を構成し、開発を進めている。`,
+                    technologies: [
+                        "SwiftUI",
+                        "SwiftData",
+                        "WidgetKit",
+                        "Xcode Cloud",
+                        "Firebase Analytics",
+                        "Firebase Crashlytics",
+                        "Google AdMob",
+                        "Swift Package Manager",
+                        "Xcode Build System"
+                    ],
+                    carouselId: 'myAppsCarouselInner10',
+                    images: [
+                        "assets/own-apps/10-tally/tally-0.png",
+                        "assets/own-apps/10-tally/tally-1.png",
+                        "assets/own-apps/10-tally/tally-2.png",
+                        "assets/own-apps/10-tally/tally-3.png",
+                        "assets/own-apps/10-tally/tally-4.png"
+                    ]
+                },
+                {
+                    id: 'myApp10-android',
+                    name: 'Android',
+                    name_ja: 'Android版',
+                    note: 'currently in development — not yet publicly released',
+                    note_ja: '現在開発中 — 一般公開前',
+                    description: `The Android version of Tally, built with Kotlin and Jetpack Compose (Material 3) using MVVM architecture and matching the iOS app feature for feature — the same multiple named counters, one-tap increment and decrement, and per-counter history, stored on-device with Room. Home screen widgets are rebuilt with Jetpack Glance to mirror the iOS WidgetKit widgets, staying in sync with the app on every change. Releases are automated with a fastlane pipeline that uploads signed AABs and the full store listing to Google Play under my own developer account.`,
+                    description_ja: `Tally Android版。KotlinとJetpack Compose（Material 3）を使用しMVVMアーキテクチャで構築され、iOS版の機能をそのまま再現 — 複数の名前付きカウンター、ワンタップでの加算・減算、カウンターごとの履歴に対応し、データはRoomでオンデバイスに保存される。ホーム画面ウィジェットはJetpack Glanceで再構築し、変更のたびにアプリと同期することでiOSのWidgetKitウィジェットと同等の体験を実現。リリースはfastlaneパイプラインで自動化し、自身のデベロッパーアカウントで署名済みAABとストア掲載情報一式をGoogle Playにアップロードしている。`,
+                    technologies: [
+                        "Kotlin",
+                        "Jetpack Compose (Material 3)",
+                        "Jetpack Glance (Widgets)",
+                        "MVVM",
+                        "Room Database",
+                        "Firebase Analytics",
+                        "Firebase Crashlytics",
+                        "Google AdMob",
+                        "fastlane",
+                        "Gradle (Kotlin DSL)",
+                        "Android Studio",
+                        "Google Play Console"
+                    ],
+                    carouselId: 'myAppsCarouselInner10Android',
+                    images: [
+                        "assets/own-apps/10-tally/android/tally-android-0.png",
+                        "assets/own-apps/10-tally/android/tally-android-1.png",
+                        "assets/own-apps/10-tally/android/tally-android-2.png",
+                        "assets/own-apps/10-tally/android/tally-android-3.png",
+                        "assets/own-apps/10-tally/android/tally-android-4.png"
+                    ]
+                }
+            ]
+        },
+        {
             id: 'myApp7',
             title: 'Mazda Phone Wallpapers',
             title_ja: 'Mazda スマホ壁紙',
