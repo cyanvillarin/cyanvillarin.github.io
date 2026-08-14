@@ -485,8 +485,8 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
             id: 'myApp10',
-            title: 'Tally – Daily Counter (iOS & Android)',
-            title_ja: 'Tally – デイリーカウンター（iOS・Android）',
+            title: 'Tally: Track Your Progress (iOS & Android)',
+            title_ja: 'Tally: 進捗を記録（iOS・Android）',
             platforms: [
                 {
                     id: 'myApp10-ios',
